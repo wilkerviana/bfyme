@@ -1,7 +1,2 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-body{
-  background: lightblue;
-}
+@import './_core/variables.scss';
+@import './layout/content.scss';

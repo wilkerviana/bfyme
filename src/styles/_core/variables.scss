@@ -1,0 +1,57 @@
+// ==================================================
+// Variables
+//
+// 1. Colors
+// 2. Font Family
+// 3. Media Queries*
+// ==================================================
+
+// --------------------------------------------------
+// 1. Colors
+// --------------------------------------------------
+
+
+// ##### Paleta de cores primárias
+$pcolor-black:rgb(33,33,33); 
+$pcolor-lightblack:rgb(50,50,50); 
+$pcolor-purplegray:rgb(111,104,127); 
+$pcolor-red:rgb(183,55,48);
+
+// ##### Paleta de cores secundárias
+$scolor-darkpurple:rgb(53,0,100); 
+$scolor-darkpink:rgb(179,44,86); 
+$scolor-rose:rgb(255,184,184);
+
+// --------------------------------------------------
+// 2. Font Family
+// --------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:100,100i,300,400,400i,700');
+
+@mixin font-family($family){
+  @if $family == titles{
+    font-family: 'Abril Fatface', cursive;
+  }
+  @if $family == texts{
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+// --------------------------------------------------
+// 2.b Weight
+// --------------------------------------------------
+
+@mixin font-weight($weight){
+  @if ($weight == wbold){
+    font-weight: 700;
+  }
+  @if ($weight == wregular){
+    font-weight: 400;
+  }
+  @if ($weight == wlight){
+    font-weight: 300;
+  }
+  @if ($weight == wthin){
+    font-weight: 100;
+  }
+}
