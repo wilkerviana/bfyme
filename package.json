@@ -1,0 +1,31 @@
+{
+  "name": "bfyme",
+  "version": "1.0.0",
+  "description": "Projeto de avaliação multidisciplinar do 2Semestre FIAP - 1TINA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilkerviana/bfyme.git"
+  },
+  "keywords": [
+    "beauty"
+  ],
+  "author": "Wilker Viana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilkerviana/bfyme/issues"
+  },
+  "homepage": "https://github.com/wilkerviana/bfyme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-scss": "^1.4.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
