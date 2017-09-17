@@ -5,29 +5,38 @@ html
     title Bfy.me
     link(rel="stylesheet" href="css/main.css")
   body
-    header
-    .banner
-      .container
-        h1.title--banner.title A sua beleza a toda hora
-        p.banner--description.description Conheça nossa plataforma 
-          | e aproveite as vantagens
-          | de utilizar serviços deliverykjkjkjk
-    .como-funciona
-      .container
-        h2.title Como funciona?
-        h3.subtitle e mais simples do que você imagina
-        p.como-funciona--description Nós queremos proporcionar conforto e bons serviços para nossos clientes e para isso
-        | dispomos de vantagens que permitem você aproveitar muito mais seu dia a dia, sem
-        | perder tempo em salão de beleza ou incômodos com agendamentos demorados.
-        .como-funciona--details
-          h4.subtitle Agendamento no mesmo dia
-          p.description Só com o Bfy.me você pode agendar um serviço para o mesmo dia
-        .como-funciona--details
-          h4.subtitle Atendimento Delivery
-          p.description Você pode agendar seu serviço em qualquer localizade do estado
-        .como-funciona--details
-          h4.subtitle Preços de mercado
-          p.description Praticamos os preços de mercado para que você use cada vez mais
-        p.como-funciona--description Aqui você terá o conforto de ser atendido no local que desejar sem precisar
-        | pagar fortunas por isso e a segurança de ter um profissional qualificado para
-        | realizar diversos tipos de serviço de beleza.
+    .full-banner
+      header
+        .container
+          .header-flex
+            h1.title Bfy.me
+            button.icon-menu
+            nav.menu
+              ul.menu-navegation
+                li.menu-link.link.hidden-lg Entrar
+                li.menu-link.link Serviços
+                li.menu-link.link Dúvidas
+                li.menu-link.link Seja um profissional
+            button.btn.btn-login Entrar
+      section.banner
+        .container
+          .wrapper-flex
+            .banner
+              h1.title A sua beleza a 
+                span toda hora
+              p.description Conheça nossa plataforma 
+                | e aproveite as vantagens de utilizar serviços delivery
+            .banner-schedule
+              h2.title Comece a usar o Bfy.me
+              form.schedule-form
+                fieldset.field
+                  select.select-default
+                    option Escolha o serviço
+                fieldset.field
+                  select.select-default
+                    option Quando deseja ser atendido?
+                fieldset.field
+                  select.select-default
+                    option Qual o local para atendimento?
+                button(type="submit") Agendar
+    script(src="js/main.js")
