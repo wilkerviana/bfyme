@@ -3,7 +3,8 @@
 //
 // 1. Colors
 // 2. Font Family
-// 3. Media Queries*
+// 3. Media Queries
+// 4. Z-Index
 // ==================================================
 
 // --------------------------------------------------
@@ -12,28 +13,31 @@
 
 
 // ##### Paleta de cores primárias
-$pcolor-black:rgb(33,33,33); 
-$pcolor-lightblack:rgb(50,50,50); 
-$pcolor-purplegray:rgb(111,104,127); 
-$pcolor-red:rgb(183,55,48);
+$pcolor-violet: rgba(34, 13, 85, 1);
+$pcolor-darkpurple:rgba(57, 20, 73, 1);
+$pcolor-lightpurple:rgba(94, 68, 143, 1);
+$pcolor-pink:rgba(152, 6, 110, 1);
 
 // ##### Paleta de cores secundárias
-$scolor-darkpurple:rgb(53,0,100); 
-$scolor-darkpink:rgb(179,44,86); 
-$scolor-rose:rgb(255,184,184);
+$scolor-darkblack:rgba(33, 33, 33, 1);
+$scolor-darkgray:rgba(50, 50, 50, 1);
+$scolor-darkgold:rgba(157, 156, 122, 1);
+$scolor-lightgold:rgba(224, 237, 197, 1);
+
 
 // --------------------------------------------------
 // 2. Font Family
 // --------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:100,100i,300,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
+
 
 @mixin font-family($family){
   @if $family == titles{
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Catamaran', sans-serif;
   }
-  @if $family == texts{
-    font-family: 'Lato', sans-serif;
+  @if $family == txt-default{
+    font-family: 'Source Sans Pro', sans-serif;
   }
 }
 
@@ -45,6 +49,9 @@ $scolor-rose:rgb(255,184,184);
   @if ($weight == wbold){
     font-weight: 700;
   }
+  @if ($weight == wsemibold){
+    font-weight: 600;
+  }
   @if ($weight == wregular){
     font-weight: 400;
   }
@@ -55,3 +62,7 @@ $scolor-rose:rgb(255,184,184);
     font-weight: 100;
   }
 }
+
+// --------------------------------------------------
+// 3. Media-queries
+// --------------------------------------------------
