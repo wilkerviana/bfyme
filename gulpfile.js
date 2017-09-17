@@ -4,8 +4,9 @@ const gulp  = require('gulp'),
       view  = require('gulp-pug'),
       plumb = require('gulp-plumber'),
       style = require('gulp-sass'),
-      image = require('gulp-imagemin'),
-      watch = require('gulp-watch');
+      watch = require('gulp-watch'),
+      imagemin = require('gulp-imagemin'),
+      webpack = require('webpack-stream');
 
 gulp.task('bs', function(){
   bs.init({
@@ -17,6 +18,7 @@ gulp.task('bs', function(){
   gulp.watch('src/**/*.js', ['script']);
   gulp.watch('src/**/*.scss', ['style']);
   gulp.watch('src/**/*.pug', ['view']);
+  gulp.watch('src/images/*', ['images']);
   gulp.watch('dist/**/*').on('change', () => {
     bs.reload();
   });
@@ -40,6 +42,22 @@ gulp.task('view',() => {
         pretty: true
       }))
       .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('script',() => {
+  gulp.src('src/scripts/*.js')
+      .pipe(webpack({
+        output: {
+          filename: '[name].js'
+        }
+      }))
+      .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('images',() => {
+  gulp.src('src/images/**/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('dist/images'))
 });
 
 
