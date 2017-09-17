@@ -1,0 +1,91 @@
+body{
+  // background: linear-gradient($scolor-darkpurple,$scolor-rose) no-repeat;
+  background: lightgray;
+  color: #ffffff;
+}
+.title{
+  @include font-family(titles);
+}
+.subtitle , .link, .btn, .description{
+  @include font-family(txt-default);
+}
+.menu{
+  display: none;
+  @media (min-width:900px) {
+    display: block;
+  }
+}
+.menu-navegation{
+  opacity: 0;
+  transform: translateX(150%);
+  visibility: hidden;
+  @media (min-width:900px) {
+    transform: translateX(0); 
+    & > .menu-link{
+      display: inline-block;
+      font-size: 1.125em;
+      margin: 0 20px;
+      @include font-weight(wbold);
+    }
+  }
+}
+.icon-menu{
+  background: rgba(255,255,255,1);
+  cursor: pointer;
+  margin: 15px 0;
+  position: relative;
+  border-radius: 6px;
+  right: 0;
+  height: 4px;
+  width: 30px;
+  transition: .5s;
+  &.active{background: rgba(255,255,255,0);}
+  &:after , &:before{
+    background: rgba(255,255,255,1);
+    border-radius: 6px;
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 30px;
+    transition: top .5s;
+    transition: transform .5s;
+  }
+  &:before{top: 8px;}
+  &:after{top: 16px;}
+  &.active:before{transform: rotate(45deg);top: 12px;}
+  &.active:after{transform: rotate(135deg);top: 12px;}
+  @media (min-width:900px) {
+    display: none;
+  }
+}
+
+.btn{
+  font-size: 1.375em;
+  border-radius: 0.3em;
+  padding: 0.2em 1.2em;
+  @include font-weight (wsemibold);
+}
+
+.btn-login{
+  border: 2px solid white;
+  color: white;
+  display: none;
+  @media (min-width:900px) {
+    display: block
+  }
+}
+
+.full-banner{
+  background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8)), url(../images/bg_banner.jpg);
+  background-position: center,center;
+  background-size: cover;
+  width: 100%;
+}
+.banner{
+  & > .title{
+    & span{
+      color: $scolor-darkgold;
+    }
+  }
+}

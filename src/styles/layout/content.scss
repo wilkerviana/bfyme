@@ -1,9 +1,0 @@
-body{
-  background: linear-gradient($scolor-darkpurple,$scolor-rose) no-repeat;
-}
-.title{
-  @include font-family(titles);
-}
-.subtitle , .description{
-  @include font-family(texts);
-}
