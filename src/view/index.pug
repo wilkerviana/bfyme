@@ -4,13 +4,15 @@ html
     meta(name="viewport" content="width=device-width,initial-scale=1")
     title Bfy.me
     link(rel="stylesheet" href="css/main.css")
+    script(src="js/main.js")
   body
-    .full-banner
+    .foo-banner
       header
         .container
           .header-flex
             h1.title Bfy.me
             button.icon-menu
+              span.icon-hamburguer
             nav.menu
               ul.menu-navegation
                 li.menu-link.link.hidden-lg Entrar
@@ -18,7 +20,7 @@ html
                 li.menu-link.link Dúvidas
                 li.menu-link.link Seja um profissional
             button.btn.btn-login Entrar
-      section.banner
+      section.main-banner
         .container
           .wrapper-flex
             .banner
@@ -38,5 +40,4 @@ html
                 fieldset.field
                   select.select-default
                     option Qual o local para atendimento?
-                button(type="submit") Agendar
-    script(src="js/main.js")
+                button.btn(type="submit") Agendar

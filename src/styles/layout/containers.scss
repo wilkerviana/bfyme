@@ -10,6 +10,12 @@
   margin: 0;
   overflow: hidden;
 }
+.wrapper-flex{
+  @media (min-width:900px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .hidden-lg{
   @media (min-width:900px) {
     display: none;

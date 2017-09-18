@@ -29,12 +29,12 @@ $scolor-lightgold:rgba(224, 237, 197, 1);
 // 2. Font Family
 // --------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
 
 
 @mixin font-family($family){
   @if $family == titles{
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'Cabin', sans-serif;
   }
   @if $family == txt-default{
     font-family: 'Source Sans Pro', sans-serif;

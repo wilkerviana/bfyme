@@ -1,13 +1,10 @@
-body{
-  // background: linear-gradient($scolor-darkpurple,$scolor-rose) no-repeat;
-  background: lightgray;
-  color: #ffffff;
-}
-.title{
-  @include font-family(titles);
-}
-.subtitle , .link, .btn, .description{
-  @include font-family(txt-default);
+.foo-banner{
+  background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8)), url(../images/bg_banner.jpg);
+  background-position: center,center;
+  background-size: cover;
+  padding: 30px 0;
+  width: 100%;
+  z-index: 0;
 }
 .menu{
   display: none;
@@ -19,6 +16,7 @@ body{
   opacity: 0;
   transform: translateX(150%);
   visibility: hidden;
+  z-index: 1;
   @media (min-width:900px) {
     transform: translateX(0); 
     & > .menu-link{
@@ -30,41 +28,40 @@ body{
   }
 }
 .icon-menu{
-  background: rgba(255,255,255,1);
-  cursor: pointer;
-  margin: 15px 0;
+  height: 32px;
   position: relative;
-  border-radius: 6px;
-  right: 0;
-  height: 4px;
-  width: 30px;
-  transition: .5s;
-  &.active{background: rgba(255,255,255,0);}
-  &:after , &:before{
+  width: 26px;
+  z-index: 2;
+  & > .icon-hamburguer{
     background: rgba(255,255,255,1);
+    display: block;
     border-radius: 6px;
-    content: '';
     position: absolute;
-    left: 0;
+    right: 0;
+    top: 18px;
     height: 4px;
-    width: 30px;
-    transition: top .5s;
-    transition: transform .5s;
+    width: 26px;
+    transition: .3s ease-out;
+    &.active{background: rgba(255,255,255,0);}
+    &:after , &:before{
+      background: rgba(255,255,255,1);
+      border-radius: 6px;
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 4px;
+      width: 26px;
+      transition: top .5s;
+      transition: transform .5s;
+    }
+    &:before{top: -8px;}
+    &:after{top: 8px;}
+    &.active:before{transform: rotate(45deg);top: 0;}
+    &.active:after{transform: rotate(135deg);top: 0;}
   }
-  &:before{top: 8px;}
-  &:after{top: 16px;}
-  &.active:before{transform: rotate(45deg);top: 12px;}
-  &.active:after{transform: rotate(135deg);top: 12px;}
   @media (min-width:900px) {
     display: none;
   }
-}
-
-.btn{
-  font-size: 1.375em;
-  border-radius: 0.3em;
-  padding: 0.2em 1.2em;
-  @include font-weight (wsemibold);
 }
 
 .btn-login{
@@ -75,17 +72,58 @@ body{
     display: block
   }
 }
-
-.full-banner{
-  background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8)), url(../images/bg_banner.jpg);
-  background-position: center,center;
-  background-size: cover;
-  width: 100%;
+.main-banner{
+  margin: 160px 0 60px;
+  position: relative;
+  @media (min-width:900px) {
+    padding-bottom: 50px;
+  }
+  &:after{
+    content: url(../images/arrow_down.png);
+    position: absolute;
+    left: calc(50% - 32px/2);
+    animation: arr-down .8s infinite ease-out;
+  }
 }
 .banner{
   & > .title{
+    font-size: 4em;
+    line-height: 1em;
+    max-width: 380px;
     & span{
       color: $scolor-darkgold;
     }
+  }
+  & > .description{
+    font-size: 1.325em;
+    margin: 15px 0;
+    max-width: 460px;
+    width: 75%;
+    @include font-weight (wlight);
+  }
+}
+
+.banner-schedule{
+  max-width: 380px;
+  & > .schedule-form{
+    margin: 0 auto;
+    & > .btn{
+      background: $pcolor-pink;
+      color: white;
+      display: block;
+      margin: 30px auto;
+    }
+  }
+}
+.schedule-form .field{
+  margin: 20px 0;
+  & .select-default{
+    border-radius: 0;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 1em;
+    padding: 10px 0;
+    width: 100%;
+    @include font-weight(wlight);
   }
 }
