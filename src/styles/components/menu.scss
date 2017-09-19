@@ -1,0 +1,126 @@
+.menu{
+  z-index: 1;
+  @media (max-width:720px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    padding: 25px 0;
+    height: 100%;
+    visibility: hidden;
+    transition: all .3s ease-out;
+    width: 100%;
+    &.active{
+      background: $pcolor-violet;
+      opacity: 1;
+      visibility: visible;
+      & > .menu-navegation{
+        transform: translateY(0);
+        position: fixed;
+      }
+    }
+  }
+  @media (min-width:900px) {display: inline-block;padding:10px 0;}
+  & > .title{
+    color: $scolor-darkgold !important;
+    display: block;
+    font-size: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    @include font-weight(wbold);
+  }
+}
+.menu-navegation{
+  height: auto;
+  width: 100%;
+  padding: 20px 10px 0;
+  transform: translateY(-150%);
+  transition: transform .5s ease-in-out;
+  @media (min-width:900px) {
+    padding: 0;
+    transform: none;
+    transition: none;
+  }
+  & > .menu-link{
+    display: block;
+    font-size: 1.225em;
+    margin: 25px 0;
+    text-align: center;
+    @include font-weight(wregular);
+    &:nth-child(2){
+      margin: auto;
+      max-width: 110px;
+      padding-right: 15px;
+      position: relative;
+      &:before{
+        background: url(../images/arrow_down.png) no-repeat;
+        background-size: 12px; 
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 12px;
+        width: 12px;
+      }
+    }
+    @media (min-width:900px) {
+      display: inline-block;
+      margin: 0 20px;
+      text-align: left;
+      @include font-weight(wbold);
+    }
+  }
+}
+
+.icon-menu{
+  height: 32px;
+  position: absolute;
+  right: 25px;
+  width: 26px;
+  z-index: 2;
+  & > .icon-hamburguer{
+    background: rgba(255,255,255,1);
+    display: block;
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    top: 18px;
+    height: 4px;
+    width: 26px;
+    transition: background .3s ease-out;
+    &.active{
+      background: rgba(255,255,255,0);
+      position: fixed;
+      top: 36px;
+      right: 25px;
+    }
+    &:after , &:before{
+      background: rgba(255,255,255,1);
+      border-radius: 6px;
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 4px;
+      width: 26px;
+      transition: top .5s;
+      transition: transform .5s;
+    }
+    &:before{top: -8px;}
+    &:after{top: 8px;}
+    &.active:before{transform: rotate(45deg);top: 0;}
+    &.active:after{transform: rotate(135deg);top: 0;}
+  }
+  @media (min-width:900px) {
+    display: none;
+  }
+}
+
+.btn-login{
+  border: 2px solid white;
+  color: white;
+  display: none;
+  @media (min-width:900px) {
+    display: inline-block;
+  }
+}
