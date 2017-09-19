@@ -1,7 +1,8 @@
 window.addEventListener('load',() => {
-  const menuHamburguer = document.querySelector('.icon-hamburguer');
+  const menuIcon = document.querySelector('.icon-hamburguer');
   
-  menuHamburguer.addEventListener('click',() => {
-    menuHamburguer.classList.toggle('active');
+  menuIcon.addEventListener('click',() => {
+    menuIcon.classList.toggle('active');
+    document.querySelector('.menu').classList.toggle('active');
   });
 });
