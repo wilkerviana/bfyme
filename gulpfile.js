@@ -5,6 +5,7 @@ const gulp  = require('gulp'),
       plumb = require('gulp-plumber'),
       style = require('gulp-sass'),
       watch = require('gulp-watch'),
+      aprefixer = require('gulp-autoprefixer'),
       imagemin = require('gulp-imagemin'),
       webpack = require('webpack-stream');
 
@@ -33,6 +34,10 @@ gulp.task('style',() => {
         }
       }))
       .pipe(style())
+      .pipe(aprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
       .pipe(gulp.dest('dist/css/'));
 });
 
