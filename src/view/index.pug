@@ -9,7 +9,8 @@ html
       header
         .container
           .header-flex
-            h1.title Bfy.me
+            .brand
+              img(src="images/bfyme.svg" alt="")
             button.icon-menu
               span.icon-hamburguer
             nav.menu
@@ -22,23 +23,40 @@ html
             button.btn.btn-login Entrar
       section.main-banner
         .container
-          .wrapper-flex
+          .wrapper
             .banner
               h1.title A sua beleza a 
                 span toda hora
-              p.description Conheça nossa plataforma 
-                | e aproveite as vantagens de utilizar serviços delivery
             .banner-schedule
-              h2.title Comece a usar o Bfy.me
+              h2.title Não perca tempo e comece a usar agora
               form.schedule-form
                 fieldset.field
                   select.select-default
                     option Escolha o serviço
                 fieldset.field
                   select.select-default
-                    option Quando deseja ser atendido?
+                    option Qual o local para atendimento?
                 fieldset.field
                   select.select-default
-                    option Qual o local para atendimento?
+                    option Quando dia?
+                fieldset.field
+                  select.select-default
+                    option Quando horário?
                 button.btn(type="submit") Agendar
+    section.how_it_works
+        .container
+          .wrapper-flex.how_it_works
+            h3.title.unflex Como funciona?
+            h4.subtitle.unflex É mais simples do que você imagina
+            .flexchild.calendar
+              .title Agendamento no mesmo dia
+              .description Só com o Bfy.me você pode agendar um serviço no mesmo dia
+            .flexchild.location
+              .title Atendimento Delivery
+              .description Você pode agendar seu serviço em qualquer localidade do estado
+            .flexchild.price
+              .title Preços de mercado
+              .description Praticamos os preços de mercado para que você use cada vez mais
+    
+    
     script(src="js/main.js")

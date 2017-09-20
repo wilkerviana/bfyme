@@ -58,7 +58,7 @@
         background-size: 12px; 
         content: '';
         position: absolute;
-        right: 0;
+        right: -2px;
         bottom: 0;
         height: 12px;
         width: 12px;
@@ -120,6 +120,7 @@
   border: 2px solid white;
   color: white;
   display: none;
+  text-transform: uppercase;
   @media (min-width:900px) {
     display: inline-block;
   }

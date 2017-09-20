@@ -12,7 +12,10 @@
 .wrapper-flex{
   @media (min-width:900px) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    > .unflex{
+      flex: 0 0 100%;
+    }
   }
 }
 .hidden-lg{
