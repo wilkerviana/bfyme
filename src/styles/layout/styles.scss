@@ -1,10 +1,8 @@
-.foo-banner{
+.banner{
   background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8)), url(../images/bg_banner.jpg);
   background-position: center,center;
   background-size: cover;
   padding: 15px 0;
-  width: 100%;
-  z-index: 0;
   @media (min-width:900px) {padding: 30px 0;}
 }
 .header-flex{
@@ -138,5 +136,37 @@
   > .description{
     color: $pcolor-lightpurple;
     @include font-weight(wlight);
+  }
+}
+.promo{
+  min-height: 120px;
+  @media(min-width:900px){
+    min-height: 260px; 
+  }
+  .container{
+    position: relative;
+    > .title{
+      font-size: 1.925em;
+      @media (min-width:900px){
+        font-size: 3.5em;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        max-width: 440px;
+      }
+    }
+  }
+}
+
+.wrapper-slider{
+  .item-slider{
+    background: darkgray;
+    border-radius: 6px;
+    margin: 30px;
+    width: 280px;
+    > .service-image{
+      background: $pcolor-pink;
+      height: 160px;
+    }
   }
 }

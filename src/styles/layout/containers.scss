@@ -1,3 +1,7 @@
+.foo{
+  width: 100%;
+  z-index: 0;
+}
 .container{
   margin: 0 auto;
   max-width: 1300px;
@@ -22,5 +26,11 @@
   @media (min-width:900px) {
     display: none !important;
   }
+}
+
+.promo{
+  background: $pcolor-darkpurple;
+  padding: 30px;
+  position: relative;
 }
 
