@@ -4,8 +4,11 @@ html
     meta(name="viewport" content="width=device-width,initial-scale=1")
     title Bfy.me
     link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
+    
+    
   body
-    .foo-banner
+    .foo.banner
       header
         .container
           .header-flex
@@ -24,7 +27,7 @@ html
       section.main-banner
         .container
           .wrapper
-            .banner
+            .featured
               h1.title A sua beleza a 
                 span toda hora
             .banner-schedule
@@ -44,19 +47,77 @@ html
                     option Quando horário?
                 button.btn(type="submit") Agendar
     section.how_it_works
-        .container
-          .wrapper-flex.how_it_works
-            h3.title.unflex Como funciona?
-            h4.subtitle.unflex É mais simples do que você imagina
-            .flexchild.calendar
-              .title Agendamento no mesmo dia
-              .description Só com o Bfy.me você pode agendar um serviço no mesmo dia
-            .flexchild.location
-              .title Atendimento Delivery
-              .description Você pode agendar seu serviço em qualquer localidade do estado
-            .flexchild.price
-              .title Preços de mercado
-              .description Praticamos os preços de mercado para que você use cada vez mais
+      .container
+        .wrapper-flex.how_it_works
+          h3.title.unflex Como funciona?
+          h4.subtitle.unflex É mais simples do que você imagina
+          .flexchild.calendar
+            .title Agendamento no mesmo dia
+            .description Só com o Bfy.me você pode agendar um serviço no mesmo dia
+          .flexchild.location
+            .title Atendimento Delivery
+            .description Você pode agendar seu serviço em qualquer localidade do estado
+          .flexchild.price
+            .title Preços de mercado
+            .description Praticamos os preços de mercado para que você use cada vez mais
+    section.services
+      .container
+        .wrapper-slider.slider
+          article.item-slider
+            .service-image
+              h4.title Manicure
+            .service-details
+              h5.subtitle A partir de
+                <br/> R$ <span> 70,00</span>
+              p Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Visualizar
+          article.item-slider
+            .service-image
+              h4.title Manicure
+            .service-details
+              h5.subtitle A partir de
+                <br/> R$ <span> 70,00</span>
+              p Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Visualizar
+          article.item-slider
+            .service-image
+              h4.title Manicure
+            .service-details
+              h5.subtitle A partir de
+                <br/> R$ <span> 70,00</span>
+              p Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Visualizar
+          article.item-slider
+            .service-image
+              h4.title Manicure
+            .service-details
+              h5.subtitle A partir de
+                <br/> R$ <span> 70,00</span>
+              p Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Visualizar
+          article.item-slider
+            .service-image
+              h4.title Manicure
+            .service-details
+              h5.subtitle A partir de
+                <br/> R$ <span> 70,00</span>
+              p Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Visualizar
+          article.item-slider
+            .service-image
+              h4.title Manicure
+            .service-details
+              h5.subtitle A partir de
+                <br/> R$ <span> 70,00</span>
+              p Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Visualizar
+    .foo.promo
+      .container
+        h3.title Convide amigos e ganhe desconto
     
     
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="https://code.jquery.com/jquery-migrate-3.0.0.min.js")
     script(src="js/main.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js")
+    
