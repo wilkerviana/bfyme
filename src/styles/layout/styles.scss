@@ -12,7 +12,7 @@
 .main-banner{
   margin: 140px 0;
 }
-.banner{
+.featured{
   > .title{
     font-size: 3em;
     line-height: 1em;
@@ -96,19 +96,23 @@
   > .subtitle{
     color: #666666;
     font-size: 1.2em;
-    margin-top: 15px;
+    margin: 15px 0 60px;
     @include font-weight(wlight);
+    @media(min-width: 900px){
+      margin: 15px 0;
+    }
   }
 }
 
 // vamos refatorar :D
 .how_it_works .flexchild{
   max-width: 280px;
-  margin: 0;
-  padding: 160px 20px 60px;
+  margin: 0 auto;
+  padding: 160px 20px 40px;
   position: relative;
   text-align: center;
-  @media (min-width:900px){margin: 80px 0;}
+  @media (min-width:900px){margin: 80px 0 40px;}
+  
   &.calendar:before{
     content: url(../images/ICON_CALENDAR.png);
     position: absolute;
@@ -159,14 +163,63 @@
 }
 
 .wrapper-slider{
-  .item-slider{
-    background: darkgray;
+  position: relative;
+  & .item-slider{
+    background: white;
     border-radius: 6px;
-    margin: 30px;
-    width: 280px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    height: 380px;
+    width: 230px !important;
+    z-index: 2;
+    @media(min-width:900px){
+      margin: 30px;
+      width: 228px !important;
+    }
     > .service-image{
       background: $pcolor-pink;
-      height: 160px;
+      clip-path: polygon(0 0,100% 0%,100% 100%, 0 55%);
+      height: 240px;
+      width: 100%;
+      > .title{
+        padding-top: 28%;
+        text-align: center;
+      }
     }
+    > .service-details{
+      color: $scolor-darkgray;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      > .subtitle{
+        margin: 0 20px 10px;
+        span{
+          font-size: 2em;
+        }
+      }
+      p{
+        margin: 20px;
+      }
+      > .btn{
+        border: 2px solid $pcolor-pink;
+        display: block;
+        font-size: 1.2em;
+        margin: 0 auto;
+        width: 130px;
+      }
+    }
+  }
+  & > .slick-prev , & > .slick-next{
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+  }
+  & > .slick-prev{
+    left: -10px;
+  }
+  & > .slick-next{
+    right: -10px;
   }
 }
