@@ -29,6 +29,12 @@
     }
   }
 }
+.banner{
+  > .main-banner{
+    margin: 50px auto;
+    padding: 50px 0;
+  }
+}
 .banner_default{
   background: linear-gradient(to right,rgba(152,6,110,1) ,rgba(31,13,85,1));
   .main-banner{

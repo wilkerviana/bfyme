@@ -11,8 +11,6 @@
 
 .featured{
   > .title{
-    font-size: 3em;
-    line-height: 1em;
     margin: 0 auto;
     text-align: center;
     > span{
@@ -29,15 +27,18 @@
 .banner-schedule{
   background: white;
   border-radius: 0.225em;
-  color: $scolor-darkgold;
-  margin: 75px auto;
-  padding: 25px;
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
   position: relative;
   > .title{
+    color: $pcolor-pink;
     text-align: center;
+    @include fontSite(titles,1.4em,wsemibold);
   }
   > .schedule-form{
     margin: 0 auto;
+    max-width: 800px;
     @media (min-width:900px){display: flex;}
     > .btn{
       background: $pcolor-pink;
@@ -55,12 +56,12 @@
 }
 .schedule-form .field{
   margin: 20px 30px;
+  padding: 10px;
   & .select-default{
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
     border-radius: 0;
-    border-bottom: 1px solid pink;
-    color: black;
+    border-bottom: 1px solid $pcolor-lightpurple;
+    color: $pcolor-lightpurple;
     font-size: 1em;
     padding: 10px 0;
     width: 100%;
@@ -311,7 +312,7 @@
         font-weight: bold;
       }
     }
-}
+  }
 }
 
 
@@ -336,6 +337,8 @@
     }
   }
   > .social{
+    margin: 0 auto;
+    width: 180px;
     @include fontSite(titles,0.6em,wsemibold);
     > .icons{
       margin: 10px 0;
