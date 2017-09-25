@@ -1,0 +1,50 @@
+// --------------------------------------------------
+// Font Family
+// --------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
+
+
+@mixin fontSite($family,$size,$weight){
+  font-size: $size;
+  font-weight: $weight;
+
+  @if $family == titles{
+    font-family: 'Cabin', sans-serif;
+  }
+  @if $family == txt-default{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  @if ($weight == wbold){
+    font-weight: 700;
+  }
+  @if ($weight == wsemibold){
+    font-weight: 600;
+  }
+  @if ($weight == wregular){
+    font-weight: 400;
+  }
+  @if ($weight == wlight){
+    font-weight: 300;
+  }
+  @if ($weight == wthin){
+    font-weight: 100;
+  }
+}
+
+// --------------------------------------------------
+// Placeholders
+// --------------------------------------------------
+
+
+.title_default{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 80px/2);
+    height: 6px;
+    width: 80px;
+  }
+}

@@ -15,14 +15,14 @@ $(document).ready(function(){
     nextArrow:"<button type='button' class='slick-next'><img src='images/arrow_slider-next.png' /></button>",
     responsive: [
       {
-        breakpoint: 800,
+        breakpoint: 760,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 620,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
