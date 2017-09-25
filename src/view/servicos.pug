@@ -7,20 +7,34 @@ html
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
   body
     .foo.banner_default.banner-services
-      header.header-flex
-        .container
-          .brand
-            img(src="images/bfyme.svg" alt="Bfy.me")
-          button.icon-menu
-            span.icon-hamburguer
-          nav.menu
-            span.title.hidden-lg Menu
-            ul.menu-navegation
-              li.menu-link.link.hidden-lg Entrar
-              li.menu-link.link Serviços
-              li.menu-link.link Dúvidas
-              li.menu-link.link Seja um profissional
-          button.btn.btn-login Entrar
+     header.header-flex
+      .container
+        .brand
+          img(src="images/bfyme.svg" alt="")
+        button.icon-menu
+          span.icon-hamburguer
+        nav.menu
+          span.title.hidden-lg Menu
+          ul.menu-navegation
+            li.menu-item.link.hidden-lg Entrar
+            li.menu-item.link
+              a.menu-link(href="#") Serviços
+              ul.dropdown
+                li.menu-item-dropdown
+                  a.menu-link-dropdown(href="") Maquiagem
+                li.menu-item-dropdown
+                  a.menu-link-dropdown(href="") Massagem
+                li.menu-item-dropdown
+                  a.menu-link-dropdown(href="") Manicure
+                li.menu-item-dropdown
+                  a.menu-link-dropdown(href="") Podologia
+                li.menu-item-dropdown
+                  a.menu-link-dropdown(href="") Penteado
+            li.menu-item.link 
+              a.menu-link(href="#") Dúvidas
+            li.menu-item.link
+              a.menu-link(href="#") Seja um profissional
+        button.btn.btn-login Entrar
       .main-banner
         h2.title.title_banner Conheça os nossos serviços de beleza
         h3.subtitle.subtitle_banner Há uma gama de serviços diversificados para você conhecer!

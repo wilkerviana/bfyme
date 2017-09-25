@@ -16,10 +16,24 @@ html
           nav.menu
             span.title.hidden-lg Menu
             ul.menu-navegation
-              li.menu-link.link.hidden-lg Entrar
-              li.menu-link.link Serviços
-              li.menu-link.link Dúvidas
-              li.menu-link.link Seja um profissional
+              li.menu-item.link.hidden-lg Entrar
+              li.menu-item.link
+                a.menu-link(href="#") Serviços
+                ul.dropdown
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Maquiagem
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Massagem
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Manicure
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Podologia
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Penteado
+              li.menu-item.link 
+                a.menu-link(href="#") Dúvidas
+              li.menu-item.link
+                a.menu-link(href="#") Seja um profissional
           button.btn.btn-login Entrar
       .main-banner
         h2.title.title_banner Encontre as dúvidas mais comuns aqui
