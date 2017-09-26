@@ -1,3 +1,8 @@
+.brand{
+  @media(min-width:720px){
+    flex-grow: 2;
+  }
+}
 .menu{
   z-index: 1;
   @media (max-width:720px) {
@@ -28,7 +33,6 @@
     font-size: 1.4em;
     text-align: center;
     text-transform: uppercase;
-    @include font-weight(wbold);
   }
 }
 .menu-navegation{
@@ -42,17 +46,25 @@
     transform: none;
     transition: none;
   }
-  & > .menu-link{
+  & > .menu-item{
     display: block;
-    font-size: 1.225em;
+    @include fontSite(titles,1.125em,wsemibold);
     margin: 25px 0;
     text-align: center;
-    @include font-weight(wregular);
+    > .menu-link{
+      color: white;
+      text-decoration: none;
+    }
     &:nth-child(2){
       margin: auto;
       max-width: 110px;
       padding-right: 15px;
       position: relative;
+      @media (min-width: 900px){
+        height: 24px;
+        position: relative;
+        // overflow: hidden;
+      }
       &:before{
         background: url(../images/arrow_down.png) no-repeat;
         background-size: 12px; 
@@ -68,7 +80,25 @@
       display: inline-block;
       margin: 0 20px;
       text-align: left;
-      @include font-weight(wbold);
+    }
+  }
+}
+
+.menu-item{ 
+  > .dropdown{
+    display: block;
+    margin: 50px 0;
+    position: absolute;
+    width: 800px;
+    left: -50%;
+    top: 0;
+    > .menu-item-dropdown{
+      display: inline-block;
+      margin: 10px 20px;
+      > .menu-link-dropdown{
+        color: white;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -119,8 +149,12 @@
   border: 2px solid white;
   color: white;
   display: none;
-  text-transform: uppercase;
+  transition: .4s ease-in;
   @media (min-width:900px) {
     display: inline-block;
+  }
+  &:hover{
+    background: white;
+    color: $pcolor-pink;
   }
 }

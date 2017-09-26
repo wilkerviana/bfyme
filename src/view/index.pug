@@ -3,32 +3,43 @@ html
   head
     meta(name="viewport" content="width=device-width,initial-scale=1")
     title Bfy.me
-    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="css/styles.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
-    
-    
   body
     .foo.banner
-      header
+      header.header-flex
         .container
-          .header-flex
-            .brand
-              img(src="images/bfyme.svg" alt="")
-            button.icon-menu
-              span.icon-hamburguer
-            nav.menu
-              span.title.hidden-lg Menu
-              ul.menu-navegation
-                li.menu-link.link.hidden-lg Entrar
-                li.menu-link.link Serviços
-                li.menu-link.link Dúvidas
-                li.menu-link.link Seja um profissional
-            button.btn.btn-login Entrar
+          .brand
+            img(src="images/bfyme.svg" alt="")
+          button.icon-menu
+            span.icon-hamburguer
+          nav.menu
+            span.title.hidden-lg Menu
+            ul.menu-navegation
+              li.menu-item.link.hidden-lg Entrar
+              li.menu-item.link
+                a.menu-link(href="#") Serviços
+                ul.dropdown
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Maquiagem
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Massagem
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Manicure
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Podologia
+                  li.menu-item-dropdown
+                    a.menu-link-dropdown(href="") Penteado
+              li.menu-item.link 
+                a.menu-link(href="#") Dúvidas
+              li.menu-item.link
+                a.menu-link(href="#") Seja um profissional
+          button.btn.btn-login Entrar
       section.main-banner
         .container
           .wrapper
             .featured
-              h1.title A sua beleza a 
+              h1.title.title_banner A sua beleza a 
                 span toda hora
             .banner-schedule
               h2.title Não perca tempo e comece a usar agora
@@ -38,30 +49,30 @@ html
                     option Escolha o serviço
                 fieldset.field
                   select.select-default
-                    option Qual o local para atendimento?
-                fieldset.field
-                  select.select-default
                     option Quando dia?
                 fieldset.field
                   select.select-default
                     option Quando horário?
                 button.btn(type="submit") Agendar
-    section.how_it_works
+    section.foo.how_it_works
       .container
         .wrapper-flex.how_it_works
-          h3.title.unflex Como funciona?
-          h4.subtitle.unflex É mais simples do que você imagina
+          h3.title.title_main.clearflex Como funciona?
+          h4.subtitle.clearflex É mais simples do que você imagina
           .flexchild.calendar
-            .title Agendamento no mesmo dia
-            .description Só com o Bfy.me você pode agendar um serviço no mesmo dia
+            h5.title.title_main Agendamento no mesmo dia
+            p.description Só com o Bfy.me você pode agendar um serviço no mesmo dia
           .flexchild.location
-            .title Atendimento Delivery
-            .description Você pode agendar seu serviço em qualquer localidade do estado
+            h5.title.title_main Atendimento Delivery
+            p.description Você pode agendar seu serviço em qualquer localidade do estado
           .flexchild.price
-            .title Preços de mercado
-            .description Praticamos os preços de mercado para que você use cada vez mais
-    section.services
+            h5.title.title_main Preços de mercado
+            p.description Praticamos os preços de mercado para que você use cada vez mais
+    section.main-services
       .container
+        .content-slider
+          h3.title.title_main.clearflex Serviços oferecidos
+          h4.subtitle.clearflex Conheça mais sobre os nossos serviços
         .wrapper-slider.slider
           article.item-slider
             .service-image
@@ -111,9 +122,40 @@ html
                 <br/> R$ <span> 70,00</span>
               p Lorem ipsum lorem ipsum lorem ipsum
               button.btn Visualizar
-    .foo.promo
+    section.foo.promo
       .container
         h3.title Convide amigos e ganhe desconto
+<<<<<<< HEAD
+=======
+    section.foo.depositions
+      .container
+        .wrapper-flex.depositions
+          h3.title.title_main.clearflex Depoimentos
+          h4.subtitle.clearflex O que dizem dos nossos serviços
+          article.flexchild.item
+            p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
+            h5.subtitle Mariana Roussef - <span>São Paulo</span>
+          article.flexchild.item
+            p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
+            h5.subtitle Mariana Roussef - <span>São Paulo</span>
+          article.flexchild.item
+            p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
+            h5.subtitle Mariana Roussef - <span>São Paulo</span>
+    footer.foo
+      .container
+        .wrapper-flex.footer
+          .brand
+            h1.title Bfy.me
+          .social
+            .icons
+              a.social-link(href="")
+                img(src="images/icons/icon-facebook.svg" alt="Facebook")
+              a.social-link(href="")
+                img(src="images/icons/icon-instagram.svg" alt="Instagram")
+              a.social-link(href="")
+                img(src="images/icons/icon-twitter.svg" alt="Twitter")
+            span Bfy.me - Todos os direitos reservados 2017
+>>>>>>> 3b68914bbbd43105e0cf77a3bdb762e0d81d05f0
     
     script(src="https://code.jquery.com/jquery-3.2.1.min.js")
     script(src="https://code.jquery.com/jquery-migrate-3.0.0.min.js")

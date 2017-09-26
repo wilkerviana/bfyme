@@ -1,0 +1,353 @@
+.banner{
+  background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8)), url(../images/bg_banner.jpg);
+  background-position: center,center;
+  background-size: cover;
+  padding: 15px 0;
+  @media (min-width:900px) {padding: 30px 0;}
+}
+.header-flex{
+  & > .title{display: inline-block;}
+}
+
+.featured{
+  > .title{
+    margin: 0 auto;
+    text-align: center;
+    > span{
+      color: $scolor-darkgold;
+    }
+  }
+  & > .description{
+    font-size: 1.325em;
+    margin: 15px 0;
+    max-width: 460px;
+    width: 75%;
+  }
+}
+.banner-schedule{
+  background: white;
+  border-radius: 0.225em;
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+  > .title{
+    color: $pcolor-pink;
+    text-align: center;
+    @include fontSite(titles,1.4em,wsemibold);
+  }
+  > .schedule-form{
+    margin: 0 auto;
+    max-width: 800px;
+    @media (min-width:900px){display: flex;}
+    > .btn{
+      background: $pcolor-pink;
+      color: white;
+      display: block;
+      margin: 30px auto;
+    }
+  }
+  &:after{
+    content: url(../images/arrow_down.png);
+    position: absolute;
+    left: calc(50% - 32px/2);
+    animation: arr-down .8s infinite ease-out;
+  }
+}
+.schedule-form .field{
+  margin: 20px 30px;
+  padding: 10px;
+  & .select-default{
+    appearance: none;
+    border-radius: 0;
+    border-bottom: 1px solid $pcolor-lightpurple;
+    color: $pcolor-lightpurple;
+    font-size: 1em;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+
+
+.how_it_works{
+  background: white;
+  justify-content: space-between;
+  text-align: center;
+  > .title{
+    color: $pcolor-pink;
+    font-size: 2.6em;
+    &:after{
+      background: $pcolor-lightpurple;
+    }
+  }
+  > .subtitle{
+    color: #666666;
+    font-size: 1.2em;
+    margin: 15px 0 60px;
+    @media(min-width: 900px){
+      margin: 15px 0;
+    }
+  }
+}
+
+// vamos refatorar :D
+.how_it_works .flexchild{
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 160px 20px 60px;
+  position: relative;
+  text-align: center;
+  @media (min-width:900px){margin: 80px 0 0;}
+  
+  &.calendar:before{
+    content: url(../images/ICON_CALENDAR.png);
+    position: absolute;
+    top: 0;
+    left: calc(50% - 120px/2);
+  } 
+  &.location:before{
+    content: url(../images/ICON_PIN.png);
+    position: absolute;
+    top: 0;
+    left: calc(50% - 104px/2);
+  } 
+  &.price:before{
+    content: url(../images/ICON_TAG.png);
+    position: absolute;
+    top: 0;
+    left: calc(50% - 82px/2);
+  } 
+  > .title{
+    color: $pcolor-pink;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  > .description{
+    color: $pcolor-lightpurple;
+  }
+}
+
+.main-services{
+  padding: 40px 0;
+  .content-slider{
+    > .title , > .subtitle{
+      text-align: center;
+    }
+    > .title{
+      font-size: 2.6em;
+      position: relative;
+      &:after{
+        content: '';
+        background: $scolor-lightgold;
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 80px/2);
+        height: 6px;
+        width: 80px;
+      }
+    }
+    > .subtitle{
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+  }
+  .wrapper-slider{
+    position: relative;
+    & > .slick-prev , & > .slick-next{
+      position: absolute;
+      top: 45%;
+      z-index: 5;
+    }
+    & > .slick-prev{
+      left: -10px;
+    }
+    & > .slick-next{
+      right: -10px;
+    }
+  }
+}
+
+.wrapper-slider .item-slider{
+  background: white;
+  border-radius: 6px;
+  color: white;
+  margin: 30px 17px;
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  width: 228px !important;
+  z-index: 2;
+  @media(min-width:900px){
+    // margin: 30px;
+  }
+  > .service-image{
+    background: $pcolor-pink;
+    clip-path: polygon(0 0,100% 0%,100% 100%, 0 55%);
+    height: 240px;
+    width: 100%;
+    > .title{
+      padding-top: 28%;
+      text-align: center;
+    }
+  }
+  > .service-details{
+    color: $scolor-darkgray;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    > .subtitle{
+      margin: 0 20px 10px;
+      span{
+        font-size: 2em;
+      }
+    }
+    p{
+      margin: 20px;
+    }
+    > .btn{
+      border: 2px solid $pcolor-pink;
+      display: block;
+      margin: 0 auto;
+      width: 130px;
+    }
+  }
+}
+
+.promo{
+  color: white;
+  min-height: 120px;
+  @media(min-width:900px){
+    min-height: 260px; 
+  }
+  .container{
+    position: relative;
+    > .title{
+      @include fontSite(titles,3.2em,wbold);
+      @media (min-width:900px){
+        position: absolute;
+        right: 0;
+        top: 30px;
+        max-width: 440px;
+      }
+    }
+  }
+}
+
+.depositions{
+  text-align: center;
+  & .wrapper-flex{
+    justify-content: space-between;
+  }
+  > .title{
+    color: $pcolor-pink;
+    font-size: 2.6em;
+    position: relative;
+    &:after{
+      content: '';
+      background: $pcolor-lightpurple;
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 80px/2);
+      height: 6px;
+      width: 80px;
+    }
+  }
+  > .subtitle{
+    color: #666666;
+    font-size: 1.2em;
+    margin: 15px 0 0;
+    @media(min-width: 900px){
+      margin: 15px 0;
+    }
+  }
+  & .item{
+    padding: 20px 0;
+    width: 280px;
+    > .description{
+      color: $scolor-darkgold;
+      font-style: italic;
+      padding: 25px 0;
+    }
+    > .subtitle{
+      color: $scolor-darkgold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.services-box .service-item{
+  align-items: center;
+  border-bottom: 1px solid $scolor-darkgold;
+  color: $scolor-darkgray;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  &:first-child{
+    margin-top: 0;
+  }
+  &:last-child{
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  & .service-item-details{
+      max-width: 680px;
+    > .title{
+      @include fontSite(txt-default,1.2em,wsemibold);
+    }
+    > .time{
+      @include fontSite(titles,0.725em,wsemibold);
+    }
+    > .text{
+      @include fontSite(txt-default,1em,wlight);
+        margin: 10px 0;
+    }
+  }  
+  & .service-item-price{
+    > .price{
+      @include fontSite(titles,1.2em,wregular);
+      > span{
+        font-size: 2em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+.footer{
+  align-items: center;
+  border-top: 1px solid #000000; 
+  color: #666666;
+  justify-content: space-between;
+  padding: 40px 0 0;
+  > .brand{
+    margin: 0 auto;
+    text-align: center; // marcação mobile
+    width: 180px;
+    @media (min-width: 780px){
+      text-align: left;
+    }
+  }
+  > .brand , > .social{
+    margin: 15px auto;
+    @media(min-width:780px){
+      margin: 0;
+    }
+  }
+  > .social{
+    margin: 0 auto;
+    width: 180px;
+    @include fontSite(titles,0.6em,wsemibold);
+    > .icons{
+      margin: 10px 0;
+    }
+  }
+  & .social-link{
+    margin: 0 12px;
+    > img{
+      width: 32px;
+    }
+  }
+}

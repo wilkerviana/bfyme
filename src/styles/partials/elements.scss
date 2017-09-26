@@ -1,0 +1,22 @@
+
+.subtitle , .link, .description{
+  @include fontSite(txt-default,1em,wregular);
+}
+.title_main{
+  @include fontSite(titles,1.525em,wbold);
+  @extend .title_default;
+}
+.title_banner{
+  @include fontSite(txt-default,2.325em,wsemibold);
+  text-transform: uppercase;
+}
+.subtitle_banner{
+  @include fontSite(txt-default,1.525em,wthin);
+}
+.btn{
+  @include fontSite(titles,0.825em,wbold);
+  border-radius: 0.225em;
+  cursor: pointer;
+  padding: 6px 12px;
+  text-transform: uppercase;
+}

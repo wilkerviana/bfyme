@@ -2,9 +2,8 @@
 // Variables
 //
 // 1. Colors
-// 2. Font Family
-// 3. Media Queries
-// 4. Z-Index
+// 2. Media Queries
+// 3. Z-Index
 // ==================================================
 
 // --------------------------------------------------
@@ -25,43 +24,5 @@ $scolor-lightgold:rgba(224, 237, 197, 1);
 
 
 // --------------------------------------------------
-// 2. Font Family
-// --------------------------------------------------
-
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
-
-
-@mixin font-family($family){
-  @if $family == titles{
-    font-family: 'Cabin', sans-serif;
-  }
-  @if $family == txt-default{
-    font-family: 'Source Sans Pro', sans-serif;
-  }
-}
-
-// --------------------------------------------------
-// 2.b Weight
-// --------------------------------------------------
-
-@mixin font-weight($weight){
-  @if ($weight == wbold){
-    font-weight: 700;
-  }
-  @if ($weight == wsemibold){
-    font-weight: 600;
-  }
-  @if ($weight == wregular){
-    font-weight: 400;
-  }
-  @if ($weight == wlight){
-    font-weight: 300;
-  }
-  @if ($weight == wthin){
-    font-weight: 100;
-  }
-}
-
-// --------------------------------------------------
-// 3. Media-queries
+// 2. Media-queries
 // --------------------------------------------------
