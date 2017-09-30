@@ -1,0 +1,24 @@
+<svg width="38" height="31" viewBox="0 0 38 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon-google</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1156 -7620)">
+<g id="icon-google">
+<g id="Group">
+<g id="Group">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(1156 7620)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(1186.05 7630.81)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 29.1628 13.7776L 15.5535 13.7776L 15.5535 18.5999L 23.8565 18.5999C 22.6179 22.7922 18.9341 25.8332 14.5813 25.8332C 9.21248 25.8332 4.86046 21.2067 4.86046 15.4999C 4.86046 9.79281 9.21264 5.1666 14.5813 5.1666C 17.2849 5.1666 19.7302 6.34009 21.4922 8.23366L 24.7851 4.42895C 22.1552 1.68965 18.5542 2.07791e-08 14.5813 2.07791e-08C 6.52831 -8.21047e-05 0 6.93952 0 15.4999C 0 24.0602 6.52831 31 14.5814 31C 21.6356 31 27.8117 25.6747 29.1628 18.6L 29.1628 13.7777L 29.1628 13.7776Z"/>
+<path id="path1_fill" d="M 7.95356 2.95906L 5.16988 2.95906L 5.16988 3.30828e-07L 2.78369 3.30828e-07L 2.78369 2.95906L 2.82927e-07 2.95906L 2.82927e-07 5.49535L 2.78369 5.49535L 2.78369 8.45449L 5.16988 8.45449L 5.16988 5.49535L 7.95356 5.49535L 7.95356 2.95906Z"/>
+</defs>
+</svg>
