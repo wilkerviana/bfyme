@@ -7,34 +7,7 @@ html
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
   body
     .foo.banner
-      header.header-flex
-        .container
-          .brand
-            img(src="images/bfyme.svg" alt="")
-          button.icon-menu
-            span.icon-hamburguer
-          nav.menu
-            span.title.hidden-lg Menu
-            ul.menu-navegation
-              li.menu-item.link.hidden-lg Entrar
-              li.menu-item.link
-                a.menu-link(href="#") Serviços
-                ul.dropdown
-                  li.menu-item-dropdown
-                    a.menu-link-dropdown(href="") Maquiagem
-                  li.menu-item-dropdown
-                    a.menu-link-dropdown(href="") Massagem
-                  li.menu-item-dropdown
-                    a.menu-link-dropdown(href="") Manicure
-                  li.menu-item-dropdown
-                    a.menu-link-dropdown(href="") Podologia
-                  li.menu-item-dropdown
-                    a.menu-link-dropdown(href="") Penteado
-              li.menu-item.link 
-                a.menu-link(href="#") Dúvidas
-              li.menu-item.link
-                a.menu-link(href="#") Seja um profissional
-          button.btn.btn-login Entrar
+      include includes/header.pug
       section.main-banner
         .container
           .wrapper
@@ -54,108 +27,112 @@ html
                   select.select-default
                     option Quando horário?
                 button.btn(type="submit") Agendar
+    //- SECTION COMO FUNCIONA
     section.foo.how_it_works
       .container
         .wrapper-flex.how_it_works
-          h3.title.title_main.clearflex Como funciona?
-          h4.subtitle.clearflex É mais simples do que você imagina
+          h3.title_default.clearflex Como funciona?
+          h4.subtitle_default.clearflex É mais fácil do que você imagina
           .flexchild.calendar
-            h5.title.title_main Agendamento no mesmo dia
-            p.description Só com o Bfy.me você pode agendar um serviço no mesmo dia
+            h5.title Agendamento no mesmo dia
+            p.description Só com o Bfy.me você marcar serviços no mesmo dia de solicitação
           .flexchild.location
-            h5.title.title_main Atendimento Delivery
-            p.description Você pode agendar seu serviço em qualquer localidade do estado
+            h5.title Atendimento Delivery
+            p.description Você pode agendar seu serviço em qualquer localidade da capital de São Paulo e região
+          .flexchild.professional
+            h5.title Profissionais qualificados
+            p.description Os profissionais passam por uma triagem para garantir qualidade em seus atendimentos
           .flexchild.price
-            h5.title.title_main Preços de mercado
-            p.description Praticamos os preços de mercado para que você use cada vez mais
-    section.main-services
+            h5.title Preços de mercado
+            p.description Praticamos os preços de mercado para que você use cada vez mais nossa plataforma
+    //- SECTION SERVIÇOS SLIDER
+    section.foo.main-services
       .container
         .content-slider
-          h3.title.title_main.clearflex Serviços oferecidos
-          h4.subtitle.clearflex Conheça mais sobre os nossos serviços
+          h3.title_default.clearflex Serviços oferecidos
+          h4.subtitle_default.clearflex Conheça mais os serviços oferecidos
         .wrapper-slider.slider
           article.item-slider
             .service-image
-              h4.title Manicure
+              picture
+                img(src="images/services/skin.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
-                <br/> R$ <span> 70,00</span>
-              p Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Visualizar
+                <br/> R$<span>70,00</span>
+              h4.title Limpeza de pele
+              p.description Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Agendar
           article.item-slider
             .service-image
-              h4.title Manicure
+              picture
+                img(src="images/services/skin.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
-                <br/> R$ <span> 70,00</span>
-              p Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Visualizar
+                <br/> R$<span>70,00</span>
+              h4.title Limpeza de pele
+              p.description Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Agendar
           article.item-slider
             .service-image
-              h4.title Manicure
+              picture
+                img(src="images/services/skin.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
-                <br/> R$ <span> 70,00</span>
-              p Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Visualizar
+                <br/> R$<span>70,00</span>
+              h4.title Limpeza de pele
+              p.description Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Agendar
           article.item-slider
             .service-image
-              h4.title Manicure
+              picture
+                img(src="images/services/skin.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
-                <br/> R$ <span> 70,00</span>
-              p Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Visualizar
+                <br/> R$<span>70,00</span>
+              h4.title Limpeza de pele
+              p.description Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Agendar
           article.item-slider
             .service-image
-              h4.title Manicure
+              picture
+                img(src="images/services/skin.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
-                <br/> R$ <span> 70,00</span>
-              p Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Visualizar
+                <br/> R$<span>70,00</span>
+              h4.title Limpeza de pele
+              p.description Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Agendar
           article.item-slider
             .service-image
-              h4.title Manicure
+              picture
+                img(src="images/services/skin.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
                 <br/> R$ <span> 70,00</span>
-              p Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Visualizar
-    section.foo.promo
-      .container
-        h3.title Convide amigos e ganhe desconto
+              h4.title Limpeza de pele
+              p.description Lorem ipsum lorem ipsum lorem ipsum
+              button.btn Agendar
+    //- SECTION DEPOIMENTOS
     section.foo.depositions
       .container
         .wrapper-flex.depositions
-          h3.title.title_main.clearflex Depoimentos
-          h4.subtitle.clearflex O que dizem dos nossos serviços
+          h3.title_default.clearflex Depoimentos
+          h4.subtitle_default.clearflex O que dizem dos nossos serviços
           article.flexchild.item
+            picture.profile-img
+              img(src="images/profiles/beautiful-woman.jpg" alt="")
             p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
-            h5.subtitle Mariana Roussef - <span>São Paulo</span>
+            h5.author Mariana Roussef - <span>São Paulo</span>
           article.flexchild.item
+            picture.profile-img
+              img(src="images/profiles/beautiful-woman.jpg" alt="")
             p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
-            h5.subtitle Mariana Roussef - <span>São Paulo</span>
+            h5.author Mariana Roussef - <span>São Paulo</span>
           article.flexchild.item
+            picture.profile-img
+              img(src="images/profiles/beautiful-woman.jpg" alt="")
             p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
-            h5.subtitle Mariana Roussef - <span>São Paulo</span>
-    footer.foo
-      .container
-        .wrapper-flex.footer
-          .brand
-            h1.title Bfy.me
-          .social
-            .icons
-              a.social-link(href="")
-                img(src="images/icons/icon-facebook.svg" alt="Facebook")
-              a.social-link(href="")
-                img(src="images/icons/icon-instagram.svg" alt="Instagram")
-              a.social-link(href="")
-                img(src="images/icons/icon-twitter.svg" alt="Twitter")
-            span Bfy.me - Todos os direitos reservados 2017
+            h5.author Mariana Roussef - <span>São Paulo</span>
     
-    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
-    script(src="https://code.jquery.com/jquery-migrate-3.0.0.min.js")
-    script(src="js/main.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js")
+    include includes/footer.pug
     
