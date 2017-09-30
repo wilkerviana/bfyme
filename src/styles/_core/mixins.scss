@@ -12,7 +12,7 @@
   @if $family == titles{
     font-family: 'Cabin', sans-serif;
   }
-  @if $family == txt-default{
+  @if $family == txt{
     font-family: 'Source Sans Pro', sans-serif;
   }
   @if ($weight == wbold){
@@ -32,19 +32,47 @@
   }
 }
 
+@mixin btnSite($bg,$border,$padding:null){
+  @if ($padding == null){
+    padding: 8px 20px;
+  }
+  background: $bg;
+  border: 1px solid $border;
+  padding: $padding;
+}
+
 // --------------------------------------------------
 // Placeholders
 // --------------------------------------------------
 
-
 .title_default{
+  color: $scolor-darkgray;
   position: relative;
+  text-align: center;
+  @include fontSite(titles,2.8em,wbold);
   &:after{
+    background: $scolor-darkgold;
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -6px;
     left: calc(50% - 80px/2);
-    height: 6px;
+    height: 4px;
     width: 80px;
   }
+}
+.subtitle_default{
+  color: $scolor-darkgold;
+  margin: 15px 0;
+  text-align: center;
+  @include fontSite(txt,1.125em,wregular);
+}
+
+.btn{
+  display: block;
+  border-radius: 14px;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  @include fontSite(titles,1em,wbold);
 }

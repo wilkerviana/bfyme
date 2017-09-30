@@ -1,0 +1,37 @@
+.services-box .service-item{
+  align-items: center;
+  border-bottom: 1px solid $scolor-darkgold;
+  color: $scolor-darkgray;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  &:first-child{
+    margin-top: 0;
+  }
+  &:last-child{
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  & .service-item-details{
+      max-width: 680px;
+    > .title{
+      @include fontSite(txt,1.2em,wsemibold);
+    }
+    > .time{
+      @include fontSite(titles,0.725em,wsemibold);
+    }
+    > .text{
+      @include fontSite(txt,1em,wlight);
+        margin: 10px 0;
+    }
+  }  
+  & .service-item-price{
+    > .price{
+      @include fontSite(titles,1.2em,wregular);
+      > span{
+        font-size: 2em;
+        font-weight: bold;
+      }
+    }
+  }
+}

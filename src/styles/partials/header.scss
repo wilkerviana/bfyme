@@ -1,6 +1,8 @@
-.brand{
-  @media(min-width:720px){
-    flex-grow: 2;
+.header-flex{
+  .brand{
+    @media(min-width:720px){
+      flex-grow: 2;
+    }
   }
 }
 .menu{
