@@ -13,3 +13,12 @@
 .subtitle_banner{
   @include fontSite(txt-default,1.525em,wthin);
 }
+.select-default{
+  appearance: none;
+  border-radius: 0;
+  border-bottom: 1px solid #bbbbbb;
+  color: #bbbbbb;
+  font-size: 1em;
+  padding: 5px 0;
+  width: 100%;
+}

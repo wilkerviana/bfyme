@@ -1,10 +1,36 @@
+.banner-services{
+  padding: 40px 0;
+}
+.services-form{
+  display: block;
+  margin: 40px 0;
+  padding: 20px;
+  @media(min-width:768px){
+    display: flex;
+    justify-content: space-between;
+  }
+  & .select-default{
+    margin: 20px;
+    text-transform: uppercase;
+    width: 260px;
+  }
+  > .btn{
+    color: $pcolor-lightpurple;
+    margin: 20px auto;
+    @include btnSite(transparent,$pcolor-lightpurple)
+  }
+}
+.services-box{
+  margin: 50px 0;
+}
 .services-box .service-item{
   align-items: center;
-  border-bottom: 1px solid $scolor-darkgold;
+  box-shadow: 2px 6px 20px -2px #E0DEDE;
   color: $scolor-darkgray;
   display: flex;
   justify-content: space-between;
-  margin: 30px auto;
+  margin: 0;
+  padding: 30px;
   &:first-child{
     margin-top: 0;
   }
@@ -18,7 +44,15 @@
       @include fontSite(txt,1.2em,wsemibold);
     }
     > .time{
+      position: relative;
+      padding-left: 20px;
       @include fontSite(titles,0.725em,wsemibold);
+      &:before{
+        content: url(../images/icons/clock.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
     > .text{
       @include fontSite(txt,1em,wlight);

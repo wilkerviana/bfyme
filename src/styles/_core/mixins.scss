@@ -54,10 +54,10 @@
     background: $scolor-darkgold;
     content: '';
     position: absolute;
-    bottom: -6px;
-    left: calc(50% - 80px/2);
+    bottom: -10px;
+    left: calc(50% - 100px/2);
     height: 4px;
-    width: 80px;
+    width: 100px;
   }
 }
 .subtitle_default{
@@ -73,6 +73,5 @@
   border: 1px solid #000;
   cursor: pointer;
   padding: 8px 20px;
-  text-transform: uppercase;
-  @include fontSite(titles,1em,wbold);
+  @include fontSite(titles,1em,wsemibold);
 }

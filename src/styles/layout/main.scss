@@ -2,64 +2,77 @@
   background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8)), url(../images/backgrounds/banner-main.jpg);
   background-position: center,center;
   background-size: cover;
-  padding: 15px 0;
+  padding: 40px 0;
 }
 
 .featured{
-  > .title{
-    margin: 0 auto;
+  > .title_banner{
+    color: white;
+    font-size: 3em;
     text-align: center;
+    text-transform: initial;
     > span{
       color: $scolor-darkgold;
     }
-  }
-  & > .description{
-    font-size: 1.325em;
-    margin: 15px 0;
-    max-width: 460px;
-    width: 75%;
+    &:after{display: none;}
   }
 }
 .banner-schedule{
   background: white;
   border-radius: 0.225em;
   margin: 50px auto;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 1024px;
+  padding: 30px 20px;
   position: relative;
   > .title{
-    color: $pcolor-pink;
+    color: $scolor-lightgray;
     text-align: center;
-    @include fontSite(titles,1.4em,wsemibold);
+    @include fontSite(titles,1.6em,wsemibold);
   }
   > .schedule-form{
     margin: 0 auto;
-    max-width: 800px;
-    @media (min-width:900px){display: flex;}
+    max-width: 1024px;
+    // @media (min-width:900px){display: flex;}
     > .btn{
-      background: $pcolor-pink;
+      @include btnSite($pcolor-lightpurple,transparent);
       color: white;
-      display: block;
+      display: inline-block;
       margin: 30px auto;
     }
   }
   &:after{
-    content: url(../images/arrow_down.png);
+    content: url(../images/assets/arrow_down.png);
     position: absolute;
     left: calc(50% - 32px/2);
-    animation: arr-down .8s infinite ease-out;
+    animation: arr-down .9s infinite ease-out;
   }
 }
+
 .schedule-form .field{
-  margin: 20px 30px;
-  padding: 10px;
+  display: inline-block;
+  margin: 60px 20px 0;
+  padding: 0 20px;
+  position: relative;
+  width: 240px;
+  &:nth-child(2){
+    border-left: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb;
+  }
+  &:after{
+    content: url(../images/assets/arrow_down-mini.png);
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+  }
   & .select-default{
     appearance: none;
     border-radius: 0;
-    border-bottom: 1px solid $pcolor-lightpurple;
-    color: $pcolor-lightpurple;
+    border-bottom: 1px solid #bbbbbb;
+    color: #bbbbbb;
     font-size: 1em;
-    padding: 10px 0;
+    padding: 5px 0;
     width: 100%;
   }
 }
@@ -105,7 +118,7 @@
 .wrapper-slider .item-slider{
   background: white;
   border-radius: 6px;
-  margin: 40px 25px;
+  margin: 40px 24px;
   position: relative;
   overflow: hidden;
   height: 440px;
