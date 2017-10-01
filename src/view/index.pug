@@ -6,26 +6,26 @@ html
     link(rel="stylesheet" href="css/styles.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
   body
-    .foo.banner
+    .foo.banner.banner_default
       include includes/header.pug
       section.main-banner
         .container
           .wrapper
             .featured
-              h1.title.title_banner A sua beleza a 
+              h1.title_default.title_banner A sua beleza a 
                 span toda hora
             .banner-schedule
               h2.title Não perca tempo e comece a usar agora
               form.schedule-form
                 fieldset.field
                   select.select-default
-                    option Escolha o serviço
+                    option Qual serviço deseja?
                 fieldset.field
                   select.select-default
-                    option Quando dia?
+                    option Qual dia?
                 fieldset.field
                   select.select-default
-                    option Quando horário?
+                    option Qual o horário?
                 button.btn(type="submit") Agendar
     //- SECTION COMO FUNCIONA
     section.foo.how_it_works

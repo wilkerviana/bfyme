@@ -7,44 +7,32 @@ html
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
   body
     .foo.banner_default.banner-services
-     header.header-flex
-      .container
-        .brand
-          img(src="images/bfyme.svg" alt="")
-        button.icon-menu
-          span.icon-hamburguer
-        nav.menu
-          span.title.hidden-lg Menu
-          ul.menu-navegation
-            li.menu-item.link.hidden-lg Entrar
-            li.menu-item.link
-              a.menu-link(href="#") Serviços
-              ul.dropdown
-                li.menu-item-dropdown
-                  a.menu-link-dropdown(href="") Maquiagem
-                li.menu-item-dropdown
-                  a.menu-link-dropdown(href="") Massagem
-                li.menu-item-dropdown
-                  a.menu-link-dropdown(href="") Manicure
-                li.menu-item-dropdown
-                  a.menu-link-dropdown(href="") Podologia
-                li.menu-item-dropdown
-                  a.menu-link-dropdown(href="") Penteado
-            li.menu-item.link 
-              a.menu-link(href="#") Dúvidas
-            li.menu-item.link
-              a.menu-link(href="#") Seja um profissional
-        button.btn.btn-login Entrar
-      .main-banner
-        h2.title.title_banner Conheça os nossos serviços de beleza
-        h3.subtitle.subtitle_banner Há uma gama de serviços diversificados para você conhecer!
+      include includes/header.pug
+      section.main-banner
+        h2.title_default.title_banner Conheça os nossos serviços de beleza
+        h3.subtitle_default.subtitle_banner Há uma gama de serviços diversificados para você conhecer!
     section.services
       .wrapper-foo
         .container
+          h3.title_default.clearflex Maquiagem
+          h4.subtitle_default.clearflex Descubra nossas opções de serviço
+          .services-filter
+            h4.title Não perca tempo e comece a usar agora
+              form.services-form
+                fieldset.field
+                  select.select-default
+                    option Categorias de serviço
+                fieldset.field
+                  select.select-default
+                    option Todos os serviços
+                fieldset.field
+                  select.select-default
+                    option Por preço de serviço
+                button.btn(type="submit") Procurar
           .services-box
             .service-item
               .service-item-details
-                h4.title Maquiagem artística
+                h4.title Maquiagem
                 span.time 45 minutos
                 p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               .service-item-price
@@ -66,22 +54,4 @@ html
               .service-item-price
                 p.price R$ 
                   span 100
-    footer.foo
-      .container
-        .wrapper-flex.footer
-          .brand
-            h1.title Bfy.me
-          .social
-            .icons
-              a.social-link(href="")
-                img(src="images/icons/icon-facebook.svg" alt="Facebook")
-              a.social-link(href="")
-                img(src="images/icons/icon-instagram.svg" alt="Instagram")
-              a.social-link(href="")
-                img(src="images/icons/icon-twitter.svg" alt="Twitter")
-            span Bfy.me - Todos os direitos reservados 2017
-    
-    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
-    script(src="https://code.jquery.com/jquery-migrate-3.0.0.min.js")
-    script(src="js/main.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js")
+    include includes/footer.pug
