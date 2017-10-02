@@ -6,8 +6,10 @@ const gulp  = require('gulp'),
       style = require('gulp-sass'),
       watch = require('gulp-watch'),
       aprefixer = require('gulp-autoprefixer'),
-      imagemin = require('gulp-imagemin'),
-      webpack = require('webpack-stream');
+      imagemin  = require('gulp-imagemin'),
+      sourcemap = require('gulp-sourcemaps'),
+      styleglob = require('gulp-sass-glob'),
+      webpack   = require('webpack-stream');
 
 gulp.task('bs', function(){
   bs.init({
@@ -15,6 +17,8 @@ gulp.task('bs', function(){
       baseDir: 'dist'
     }
   });
+
+  gulp.start(['images', 'script', 'style', 'view']);
 
   gulp.watch('src/**/*.js', ['script']);
   gulp.watch('src/**/*.scss', ['style']);
@@ -27,17 +31,20 @@ gulp.task('bs', function(){
 
 gulp.task('style',() => {
   gulp.src('src/styles/*.scss')
+      .pipe(sourcemap.init())
       .pipe(plumb({
         handleError: function(error){
           console.log(error);
           this.emit('end');
         }
       }))
+      .pipe(styleglob())
       .pipe(style())
       .pipe(aprefixer({
         browsers: ['last 2 versions'],
         cascade: false
       }))
+      .pipe(sourcemap.write('.'))
       .pipe(gulp.dest('dist/css/'));
 });
 

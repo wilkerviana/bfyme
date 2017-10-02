@@ -1,10 +1,6 @@
-@import '_core/reset.scss';
-@import '_core/variables.scss';
-@import '_core/mixins.scss';
-@import 'base/basics.scss';
-@import 'base/containers.scss';
-@import 'partials/elements.scss';
-@import 'partials/menu.scss';
-@import 'layout/animate.scss';
-@import 'layout/main.scss';
-@import 'layout/account.scss';
+@import '_core/_reset.scss';
+@import '_core/*.scss';
+@import 'base/*.scss';
+@import 'partials/*.scss';
+@import 'modules/*.scss';
+@import 'layout/*.scss';
