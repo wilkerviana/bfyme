@@ -2,7 +2,7 @@
 // Font Family
 // --------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Cabin:300,400,400i,500,500i,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
 
 
 @mixin fontSite($family,$size,$weight){
@@ -44,6 +44,7 @@
 // --------------------------------------------------
 // Placeholders
 // --------------------------------------------------
+
 .title_default{
   color: $scolor-darkgray;
   position: relative;
@@ -59,10 +60,18 @@
     width: 100px;
   }
 }
+.subtitle_default{
+  color: $scolor-darkgold;
+  margin: 15px 0;
+  text-align: center;
+  @include fontSite(txt,1.125em,wregular);
+}
 
-@mixin centerv(){
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) 
+.btn{
+  display: block;
+  border-radius: 14px;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 8px 20px;
+  @include fontSite(titles,1em,wsemibold);
 }

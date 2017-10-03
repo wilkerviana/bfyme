@@ -74,6 +74,7 @@
 ul.tab{
     position: relative;
     height: 500px;
+    
     li {
         width: 100%;
         color: #fff;
@@ -133,13 +134,14 @@ ul.tab{
             color: $scolor-darkblack;
             max-height: 0;
             overflow: hidden;
-            transition: all .3s ease;
             opacity: 0;
             visibility: hidden;
+            top: 0;
             @media (min-width:900px){
                 width: 1000px;
                 margin-left: 300px;
                 background: white !important;
+                
             }
             
         }
@@ -197,4 +199,7 @@ ul.tab{
             }
         }
     }  
+}
+.header-account {
+    @include fontSite(titles,1.125em,wregular);
 }

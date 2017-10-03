@@ -1,0 +1,41 @@
+.card-faq{
+  border: 1px solid $scolor-darkgray;
+  max-height: 80px;
+  margin: 50px auto;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: max-height .4s ease-in;
+  &.active{
+    max-height: 300px;
+    overflow: inherit;
+    > .card-details{
+      opacity: 1;
+    }
+  }
+  > .card-head{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    > .title{
+      color: $scolor-darkgray;
+      @include fontSite(titles,1.6em,wregular);
+    }
+    > .btn-plus{
+      border: 2px solid $scolor-darkgray;
+      border-radius: 25px;
+      padding: 0 10px;
+      @include fontSite(titles,1.6em,wregular);
+    }
+  }
+  > .card-details{
+    opacity: 0;
+    margin: 40px auto;
+    transition: opacity .2s ease-out;
+    transition-delay: .4s;
+    > .text{
+      color: $scolor-darkgray;
+      @include fontSite(txt,1.2em,wlight);
+    }
+  }
+}
