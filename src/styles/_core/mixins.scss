@@ -69,9 +69,16 @@
 
 .btn{
   display: block;
-  border-radius: 14px;
-  border: 1px solid #000;
+  border-radius: 10em;
+  border: 1.5px solid $pcolor-pink;
   cursor: pointer;
   padding: 8px 20px;
+  color: $pcolor-pink;
   @include fontSite(titles,1em,wsemibold);
+  transition: all .3s ease-out;
+  &:hover{
+    transition: all .3s ease-in;
+    color: white;
+    background: $pcolor-pink;
+  }
 }

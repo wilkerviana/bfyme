@@ -22,3 +22,13 @@
   padding: 5px 0;
   width: 100%;
 }
+input{
+  &[type=text],
+  &[type=password]{
+    @include fontSite(txt,1em,wregular);
+    width: 100%;
+  }
+  margin: 3px;
+  border: 1px solid $scolor-darkgray;
+  padding: 8px 12px;
+}
