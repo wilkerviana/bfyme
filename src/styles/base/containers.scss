@@ -8,6 +8,7 @@
   max-width: 1300px;
   width: 90%;
 }
+
 .header-flex{
   > .container{
     display: flex;
@@ -28,12 +29,6 @@
       flex: 0 0 100%;
     }
   }
-}
-//account
-.wrapper-account{
-  width: 100vw;
-  height: 100vh;
-  background: $scolor-lightgray;
 }
 .banner_default{
   background: linear-gradient(to right,rgba(152,6,110,1) ,rgba(31,13,85,1));

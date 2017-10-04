@@ -7,7 +7,10 @@ html
 		link(rel="stylesheet" href="css/styles.css")
 	body
 		main.wrapper-account
-			.container
+			.wrapper-header-account
+				.container-account
+					include includes/header.pug
+			.container-account
 				ul(role="tablist").tabs
 					li
 						input(type="radio" name="tabs" id="tab1" checked)
@@ -18,7 +21,9 @@ html
 									input(type="radio" name="tabs2" checked).tab-input#tab-ag
 									label(for="tab-ag").label-tab Agendamento
 									.tab-content
-										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										.header-account Agendamento
+										.content-account Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
 								li
 									input(type="radio" name="tabs2").tab-input#tab-dados
 									label(for="tab-dados").label-tab Dados Cadastrais

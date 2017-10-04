@@ -28,8 +28,8 @@
         }
         label {
             display: block;
-            padding: 17px 0;
-            @include fontSite(titles,1.125em,wregular);
+            padding: 15px 0;
+            @include fontSite(titles,1em,wregular);
             letter-spacing: 0.5px;
             background: $scolor-darkgold;
             cursor: pointer;
@@ -43,11 +43,10 @@
                 background: darken($pcolor-pink, 10);
             }
             @media (min-width:900px) {
-                padding: 17px 30px;
+                padding: 15px 30px;
                 display: inline-block;
             }
-        }
-        
+        }     
     }
     .tabs-content{
         z-index: 2;
@@ -58,7 +57,7 @@
         top: 65px;
         left: 0; 
         color: $scolor-darkblack;
-        @include fontSite(txt,1.125em,wregular);
+        @include fontSite(txt,.9em,wregular);
     }
     //The Magic
     [id^="tab"]:checked + label { 
@@ -77,8 +76,9 @@ ul.tab{
     
     li {
         width: 100%;
-        color: #fff;
+        color:  white;
         overflow: hidden;
+        background: white;
         .tab-input {
             position: absolute;
             opacity: 0;
@@ -92,7 +92,8 @@ ul.tab{
             background: white !important;
             padding: 0 !important;
             border-top: 1px solid rgba($scolor-darkblack, 0.15); 
-            width: 100%;      
+            width: 100%;    
+            @include fontSite(titles,1.15em,wregular);  
             @media (min-width:900px){
                 position: absolute;
                 width: 280px;
@@ -102,7 +103,7 @@ ul.tab{
             }           
         }
         @media (min-width:900px){
-            
+            background:transparent;
             &:nth-child(1){
                 .label-tab {
                     top: 0px;
@@ -200,6 +201,31 @@ ul.tab{
         }
     }  
 }
+.wrapper-account{
+    width: 100vw;
+    height: 100vh;
+    background: rgba($scolor-lightgray,.2);
+  }
+.wrapper-header-account {
+    padding: 20px;
+    background-image: linear-gradient(to right, $pcolor-pink, $pcolor-pink,$pcolor-lightpurple,$pcolor-lightpurple);
+    display: block;
+    margin-bottom: 20px;
+
+}
+.container-account{
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    @media (min-width:900px){
+      max-width: 1300px;
+    }
+}
 .header-account {
-    @include fontSite(titles,1.125em,wregular);
+    @include fontSite(titles,1.125em,wsemibold);
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd; 
+}
+.content-account{
+    padding: 20px 30px 30px;
 }

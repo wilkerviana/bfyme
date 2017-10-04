@@ -25,4 +25,12 @@ header.header-flex
           a.menu-link(href="#") Dúvidas
         li.menu-item.link
           a.menu-link(href="#") Seja um profissional
-    button.btn.btn-login Entrar
+    //button.btn.btn-login Entrar
+    input(type="checkbox" name="menu-account" id="menu-account")
+    label(for="menu-account").btn.btn-login.label-menu-account
+      | Olá, Mariana
+      .arrow-menu
+    ul.menu-account
+      li: a(href="#") Minha Conta
+      li: a(href="#") Conta Profissional
+      li: a(href="#") Sair da Conta
