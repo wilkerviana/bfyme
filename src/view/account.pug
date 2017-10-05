@@ -65,9 +65,51 @@ html
 								li
 									input(type="radio" name="tabs2").tab-input#tab-end
 									label(for="tab-end").label-tab Endereços
-									.tab-content
-										.header-account Meus Endereços
-										.content-account Lorem ipsum dolor sit amet
+									.tab-content.tab-address
+										.header-welcome
+											h2.title Olá Mariana!
+										.header-account
+											h3.title Meus endereços
+											h4.subtitle Informe abaixo o local onde deseja ser atendido, o profissional irá até o local.
+										.content-account
+											.register-address
+												form.form-address(action="")
+													fieldset.form-field
+														input.form-input(type="text" placeholder="Dê um nome ao endereço ex: Casa, Trabalho...")
+													fieldset.form-field
+														input.form-input(type="text" placeholder="Digite o CEP")
+													fieldset.form-field
+														input.form-input(type="text" placeholder="Logradouro")
+													fieldset.form-field
+														input.form-input(type="text" placeholder="Número")
+													fieldset.form-field
+														input.form-input(type="text" placeholder="Bairro")
+													fieldset.form-field
+														input.form-input(type="text" placeholder="Telefone de contato")
+													button.btn Salvar
+											.registered-address
+												h3.title Meus endereços:
+												.address.active
+													.address-header
+														h4.title Padrão
+														a.address-option.edit(href="") editar
+														a.address-option.delete(href="") excluir
+													.address-body
+														h5.title Minha casa
+														p.description Rua Maria Candida 358
+														p.description Vila Guilherme
+														p.description 11 941847444
+												.address
+													.address-header
+														h4.title Secundário
+														a.address-option.edit(href="") editar
+														a.address-option.delete(href="") excluir
+													.address-body
+														h5.title Minha casa
+														p.description Rua Maria Candida 358
+														p.description Vila Guilherme
+														p.description 11 941847444
+
 								li
 									input(type="radio" name="tabs2").tab-input#tab-desc
 									label(for="tab-desc").label-tab Código de desconto
@@ -103,3 +145,4 @@ html
 									.tab-content
 										.header-account Meu Dados profissionais
 										.content-account Lorem ipsum dolor sit amet
+		include includes/footer.pug

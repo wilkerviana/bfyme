@@ -17,18 +17,10 @@ html
           h3.title_default.clearflex Maquiagem
           h4.subtitle_default.clearflex Descubra nossas opções de serviço
           .services-filter
-            h4.title Não perca tempo e comece a usar agora
-              form.services-form
-                fieldset.field
-                  select.select-default
-                    option Categorias de serviço
-                fieldset.field
-                  select.select-default
-                    option Todos os serviços
-                fieldset.field
-                  select.select-default
-                    option Por preço de serviço
-                button.btn(type="submit") Procurar
+            form.services-form(action="buscar" method="GET")
+              fieldset.field
+                input.input-form(type="search" name="buscarServico" placeholder="Digite o serviço que gostaria de buscar") 
+              button.btn(type="submit") Procurar
           .services-box
             .service-item
               .service-item-details
@@ -38,6 +30,7 @@ html
               .service-item-price
                 p.price R$ 
                   span 100
+                button.btn Agendar
             .service-item
               .service-item-details
                 h4.title Maquiagem artística
@@ -46,6 +39,7 @@ html
               .service-item-price
                 p.price R$ 
                   span 100
+                button.btn Agendar
             .service-item
               .service-item-details
                 h4.title Maquiagem artística
@@ -54,4 +48,5 @@ html
               .service-item-price
                 p.price R$ 
                   span 100
+                button.btn Agendar
     include includes/footer.pug

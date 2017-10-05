@@ -139,7 +139,6 @@ ul.tab{
             visibility: hidden;
             top: 0;
             @media (min-width:900px){
-                width: 1000px;
                 margin-left: 300px;
                 background: white !important;
                 
@@ -157,6 +156,9 @@ ul.tab{
             visibility: visible;
             p {
                 padding: 30px;
+            }
+            &.tab-address{
+              max-height: 100%;
             }
         }
         .tab-input:checked ~  .label-tab {
