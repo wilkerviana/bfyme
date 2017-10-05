@@ -1,76 +1,231 @@
-$background: #9b59b6;
-$tabs-base-color: #8e44ad;
 .tabs {
     width: 100%;  
-    float: none;
     list-style: none;
     position: relative;
-    margin: 80px 0 0 10px;
     text-align: left;
     background: white;
     height: 50px;
+    
     li {
+        display: block;  
+        margin: 0;
+        padding: 0; 
         float: left;
-        display: block;
-    }
-    input[type="radio"] {
-        position: absolute;
-        top: 0;
-        left: -9999px;
-    }
-    label {
-        display: block;
-        padding: 14px 21px;
-        border-radius: 2px 2px 0 0;
-        font-size: 20px;
-        font-weight: normal;
-        text-transform: uppercase;
-        background: $scolor-darkgold;
-        cursor: pointer;
-        position: relative;
-        height: 50px; 
-        transition:all 0.2s ease-in-out;
-        &:hover {
-            background: darken($tabs-base-color, 10);
+        width: 40%;
+        outline: 0;
+        input[type="radio"] {
+            display: none;
         }
+        &:nth-child(2) {
+            width: 60%;
+        }
+        @media (min-width:900px) {
+            width: auto; 
+            &:nth-child(2) {
+                width: auto; 
+    
+            }
+        }
+        label {
+            display: block;
+            padding: 15px 0;
+            @include fontSite(titles,1em,wregular);
+            letter-spacing: 0.5px;
+            background: $scolor-darkgold;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            height: 50px; 
+            transition:all 0.2s ease-in-out;
+            color: white;
+            outline: 0;
+            &:hover {
+                background: darken($pcolor-pink, 10);
+            }
+            @media (min-width:900px) {
+                padding: 15px 30px;
+                display: inline-block;
+            }
+        }     
     }
-    .tab-content{
+    .tabs-content{
         z-index: 2;
         display: none; 
         overflow: hidden;
         width: 100%;
-        font-size: 17px;
-        line-height: 25px;
-        padding: 25px;  
         position: absolute;
         top: 65px;
         left: 0; 
-        background: white;
+        color: $scolor-darkblack;
+        @include fontSite(txt,.9em,wregular);
     }
     //The Magic
     [id^="tab"]:checked + label { 
-        top: 0;
-        padding-top: 17px; 
-        background: darken($tabs-base-color, 15); 
+        background: $pcolor-pink; 
     }
     [id^="tab"]:checked ~ [id^="tab-content"] {
         display: block;
     }
 }
-p.link {
-    clear: both;
-    margin: 380px 0 0 15px;
-    a {
-        text-transform: uppercase;
-        text-decoration: none;
-        display: inline-block;
-        color: #fff;
-        padding: 5px 10px;
-        margin: 0 5px;
-        background-color: darken($tabs-base-color, 15);
-        transition:all 0.2s ease-in;
-        &:hover {
-            background-color: darken($tabs-base-color, 20);
+//--------------------------------------
+//ACORDEON
+//--------------------------------------
+ul.tab{
+    position: relative;
+    height: 500px;
+    
+    li {
+        width: 100%;
+        color:  white;
+        overflow: hidden;
+        background: white;
+        .tab-input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
         }
+        .label-tab {
+            display: block;
+            line-height: 3;
+            cursor: pointer;
+            color: $scolor-darkblack !important;
+            background: white !important;
+            padding: 0 !important;
+            border-top: 1px solid rgba($scolor-darkblack, 0.15); 
+            width: 100%;    
+            @include fontSite(titles,1.15em,wregular);  
+            @media (min-width:900px){
+                position: absolute;
+                width: 280px;
+                height: 50px;
+                top: 0;
+                left: 0;
+            }           
+        }
+        @media (min-width:900px){
+            background:transparent;
+            &:nth-child(1){
+                .label-tab {
+                    top: 0px;
+                    border: 0;
+                }  
+            }  
+            &:nth-child(2){
+                .label-tab {
+                    top: 50px;
+                }  
+            } 
+            &:nth-child(3){
+                .label-tab {
+                    top: 100px;
+                }  
+            } 
+            &:nth-child(4){
+                .label-tab {
+                    top: 150px;
+                }  
+            } 
+            &:nth-child(5){
+                .label-tab {
+                    top: 200px;
+                }  
+            } 
+        }
+        .tab-content {
+            color: $scolor-darkblack;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            top: 0;
+            @media (min-width:900px){
+                width: 1000px;
+                margin-left: 300px;
+                background: white !important;
+                
+            }
+            
+        }
+        &:nth-child(2) {
+            width: auto;
+        }
+        /* :checked */
+        .tab-input:checked ~ .tab-content {
+            transition: all .3s ease;
+            max-height: 25em;
+            opacity: 1;
+            visibility: visible;
+            p {
+                padding: 30px;
+            }
+        }
+        .tab-input:checked ~  .label-tab {
+            background: $pcolor-pink !important;
+            color:white !important;
+            border: 0;
+        }
+        /* Icon */
+        label::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 3em;
+            height: 3em;
+            line-height: 3;
+            text-align: center;
+            -webkit-transition: all .35s;
+            -o-transition: all .35s;
+            transition: all .35s;
+        }
+        input[type=checkbox] + label::after {
+            content: "+";
+            @media (min-width:900px) {
+                color: white !important;
+            }
+        }
+        input[type=radio] + label::after {
+            content: "\25BC";
+            @media (min-width:900px) {
+                color: white !important;
+            }
+        }
+        input[type=checkbox]:checked + label::after {
+            transform: rotate(315deg);          
+        }
+        input[type=radio]:checked + label::after {
+            transform: rotateX(180deg);
+            @media (min-width:900px) {
+                transform: rotate(-90deg);
+            }
+        }
+    }  
+}
+.wrapper-account{
+    width: 100vw;
+    height: 100vh;
+    background: rgba($scolor-lightgray,.2);
+  }
+.wrapper-header-account {
+    padding: 20px;
+    background-image: linear-gradient(to right, $pcolor-pink, $pcolor-pink,$pcolor-lightpurple,$pcolor-lightpurple);
+    display: block;
+    margin-bottom: 20px;
+
+}
+.container-account{
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    @media (min-width:900px){
+      max-width: 1300px;
     }
-} 
+}
+.header-account {
+    @include fontSite(titles,1.125em,wsemibold);
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd; 
+}
+.content-account{
+    padding: 20px 30px 30px;
+}
