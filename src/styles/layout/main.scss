@@ -105,20 +105,20 @@
   & > .slick-prev , & > .slick-next{
     position: absolute;
     top: 45%;
-    z-index: 5;
+    z-index: 3;
   }
   & > .slick-prev{
-    left: -10px;
+    left: 10px;
   }
   & > .slick-next{
-    right: -10px;
+    right: 10px;
   }
 }
 // SLIDER ITENS
 .wrapper-slider .item-slider{
   background: white;
   border-radius: 6px;
-  margin: 40px 24px;
+  margin: 42px;
   position: relative;
   overflow: hidden;
   height: 440px;
