@@ -22,7 +22,7 @@ window.addEventListener('load',() => {
    });
    
   // modal login
-  const btnLogin = document.querySelector('.btn-login');
+  const btnLogin = document.querySelector('.btn-login2');
   const modalLogin = document.querySelector('.modal');
   const modalOverlay = document.querySelector('.modal-overlay');
   

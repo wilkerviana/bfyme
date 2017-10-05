@@ -1,0 +1,105 @@
+#login,
+#register{
+    @include full();
+    z-index: 10;
+    background: rgba($scolor-darkblack, .85);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    @include fontSite(titles,1em,wregular);
+    .bt-close-login{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 10px;
+        transition: all .3s ease-in-out;
+        right: 5vw;
+        z-index: 2;
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            border-top:2px solid $scolor-darkgold;
+            width: 100%;
+            left: 0;
+            transform: rotate(45deg);
+            top: 14px;
+        }
+        &::before{
+            transform: rotate(-45deg)
+        }
+    }
+    article{
+        @include center();
+        background: white;
+        width: 90vw;
+        border-radius: 6px;
+        transition: all .3s ease-in-out;
+        top: -100%;
+        .content{
+            padding: 25px 25px 15px 25px;
+            h3{
+                padding: 0px 0 20px 0;
+                text-align: center;
+                color: $scolor-darkgold;
+                font-weight: 600;
+            }
+            .line {
+                display: block;
+                border-bottom: 1px solid $scolor-darkgold;
+                margin: 25px 0 15px;
+                position: relative;
+                span {
+                    padding: 0 5px;
+                    display: inline-block;
+                    background:white;
+                    transition: all .3s ease-in-out;
+                    @include center();
+                    color: $scolor-darkgold;
+                }
+            }
+        }
+        .password{
+            padding: 0 0 15px 0 ;
+            display: block;
+            text-align: center;
+            a{
+                color: $scolor-darkgold;
+                font-weight: 600;
+            }
+        }
+        .bottom{
+            background: $scolor-darkgold;
+            display: block;
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 6px 6px;
+            color: white;
+            font-weight: 600;
+        }
+    }
+    &:target{
+        transition: all .3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        article{
+            top: 50%;
+        }
+    }
+    .btn {
+        width: 100%;
+        display: block;
+        margin: 15px 0 5px;
+    }
+}
+@media (min-width: 768px){
+    #login,
+    #register{
+        .bt-close-login{
+            right:15px;
+        }
+        article{
+            width: 350px;
+        }
+    }
+}

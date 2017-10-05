@@ -1,0 +1,55 @@
+#login   
+    article
+        .content
+            a.bt-close-login(href="#")
+            h3 Login
+            a.bt-facebook
+                svg
+                    use(xlink:href="images/icons.svg#facebook")
+                span Entre com Facebook
+            .line   
+                span OU         
+            .forms   
+                input(type="text" name="name" class="input-text" id="nome" required autocomplete="off")
+                label(for="nome").label-form 
+                    span Qual seu e-mail?
+                    .bd
+            .forms      
+                input(type="password" name="password" class="input-text" id="password" required autocomplete="off")
+                label(for="password").label-form 
+                    span Qual sua senha?
+                    .bd
+            button(type="submit").btn ENTRAR
+        .password
+            a(href="") Esqueceu sua senha? Clique aqui
+        a.bottom(href="#register") Não é cadastrado? CLIQUE AQUI
+#register   
+    article
+        .content
+            a.bt-close-login(href="#")
+            h3 Cadastro
+            a.bt-facebook
+                svg
+                    use(xlink:href="images/icons.svg#facebook")
+                span Cadastre com Facebook
+            .line   
+                span OU      
+            .forms   
+                input(type="text" name="regnome" class="input-text" id="regnome" required autocomplete="off")
+                label(for="regnome").label-form 
+                    span Qual seu nome?
+                    .bd   
+            .forms   
+                input(type="text" name="regmail" class="input-text" id="regmail" required autocomplete="off")
+                label(for="regmail").label-form 
+                    span Qual seu e-mail?
+                    .bd
+            .forms      
+                input(type="password" name="senha" class="input-text" id="senha" required autocomplete="off")
+                label(for="senha").label-form 
+                    span Crie uma senha
+                    .bd
+            button(type="submit").btn CADASTRAR
+        .password
+            a(href="") Esqueceu sua senha? Clique aqui
+        a.bottom(href="#login") ACESSAR MINHA CONTA
