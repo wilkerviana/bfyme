@@ -55,8 +55,10 @@
   position: relative;
   width: 240px;
   &:nth-child(2){
-    border-left: 1px solid #bbbbbb;
-    border-right: 1px solid #bbbbbb;
+    @media (min-width: 960px){
+      border-left: 1px solid #bbbbbb;
+      border-right: 1px solid #bbbbbb;
+    }
   }
   &:after{
     content: url(../images/assets/arrow_down-mini.png);
@@ -82,7 +84,7 @@
   justify-content: space-between;
   .flexchild{
     color: $scolor-darkgray;
-    margin: 100px 0;
+    margin: 100px auto;
     max-width: 230px;
     height: 260px;
     padding-top: 160px;
@@ -105,20 +107,20 @@
   & > .slick-prev , & > .slick-next{
     position: absolute;
     top: 45%;
-    z-index: 5;
+    z-index: 3;
   }
   & > .slick-prev{
-    left: -10px;
+    left: 10px;
   }
   & > .slick-next{
-    right: -10px;
+    right: 10px;
   }
 }
 // SLIDER ITENS
 .wrapper-slider .item-slider{
   background: white;
   border-radius: 6px;
-  margin: 40px 24px;
+  margin: 42px;
   position: relative;
   overflow: hidden;
   height: 440px;
@@ -158,7 +160,7 @@
   justify-content: space-between;
   text-align: center;
   & .item{
-    margin: 120px 0;
+    margin: 120px auto;
     position: relative;
     width: 280px;
     &:before{

@@ -1,9 +1,40 @@
 window.addEventListener('load',() => {
+  // menu hamburguer
   const menuIcon = document.querySelector('.icon-hamburguer');
   menuIcon.addEventListener('click',() => {
     menuIcon.classList.toggle('active');
     document.querySelector('.menu').classList.toggle('active');
   });
+  
+  // accordion dúvidas
+  const cardQuest = document.querySelectorAll('.card-faq');
+  cardQuest.forEach(function(card) {
+    const elCard = card;
+    const btnQuest = card.children[0].childNodes[3];
+    btnQuest.addEventListener('click',() => {
+      elCard.classList.toggle('active');
+      if (elCard.className == 'card card-faq active') {
+        btnQuest.textContent = '-';
+      } else{
+        btnQuest.textContent = '+';
+      }
+    });
+   });
+   
+  // modal login
+  const btnLogin = document.querySelector('.btn-login');
+  const modalLogin = document.querySelector('.modal');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  
+  btnLogin.addEventListener('click',() => {
+    modalOverlay.classList.add('active');
+    modalLogin.classList.add('active');
+  });
+  modalOverlay.addEventListener('click',(event) => {
+    modalOverlay.classList.remove('active');
+    modalLogin.classList.remove('active');
+  });
+
 });
 
 $(document).ready(function(){
@@ -24,8 +55,10 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 620,
+        breakpoint: 420,
         settings: {
+          centerMode: true,
+          centerPadding: '40px',
           slidesToShow: 1,
           slidesToScroll: 1
         }
