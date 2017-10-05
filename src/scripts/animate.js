@@ -55,8 +55,10 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 620,
+        breakpoint: 420,
         settings: {
+          centerMode: true,
+          centerPadding: '40px',
           slidesToShow: 1,
           slidesToScroll: 1
         }
