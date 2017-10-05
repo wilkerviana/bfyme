@@ -103,3 +103,25 @@
         }
     }
 }
+.bt-facebook {
+    background: #3157ac;
+    display: block;
+    border-radius: 4px;
+    text-align: left;
+    padding-left: 10px;
+    svg {
+        width: 30px;
+        height: 20px;
+        fill: white;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    span {
+        color: white;
+        font-weight: 600;
+        padding: 10px 15px;
+        display: inline-block;
+        vertical-align: middle;
+        border-left: 1px solid white;
+    }
+}
