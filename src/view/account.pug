@@ -1,148 +1,151 @@
 doctype
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width,initial-scale=1")
-		title Bfy.me - Minha Contas
-		link(rel="stylesheet" href="css/styles.css")
-	body
-		main.wrapper-account
-			.wrapper-header-account
-				.container-account
-					include includes/header.pug
-			.container-account
-				ul(role="tablist").tabs
-					li
-						input(type="radio" name="tabs" id="tab1" checked)
-						label(for="tab1" role="tab" ria-selected="true" aria-controls="panel1" tabindex="0") CLIENTE
-						div(role="tabpanel" aria-labelledby="cliente" aria-hidden="false")#tab-content1.tabs-content
-							ul.tab
-								li
-									input(type="radio" name="tabs2" checked).tab-input#tab-ag
-									label(for="tab-ag").label-tab Agendamento
-									.tab-content
-										.header-account Meus Agendamentos
-										.content-account 
-											.tb-account
-												.tb-account-cell 
-													.tb-title Profissional
-													.tb-content
-														h3 Tania Ferreira
-														p Esteticista
-														p Estrela
-												.tb-account-cell 
-													.tb-title Serviços
-													.tb-content
-														h3 Massagem Modeladora
-														p 25/10/2017 à 17:00
-														p Minha Casa
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Bfy.me - Minha Contas
+    link(rel="stylesheet" href="css/styles.css")
+  body
+    main.wrapper-account
+      .wrapper-header-account
+        .container-account
+          include includes/header.pug
+      .container-account
+        ul(role="tablist").tabs
+          li
+            input(type="radio" name="tabs" id="tab1" checked)
+            label(for="tab1" role="tab" ria-selected="true" aria-controls="panel1" tabindex="0") CLIENTE
+            div(role="tabpanel" aria-labelledby="cliente" aria-hidden="false")#tab-content1.tabs-content
+              ul.tab
+                li
+                  input(type="radio" name="tabs2" checked).tab-input#tab-ag
+                  label(for="tab-ag").label-tab Agendamento
+                  .tab-content
+                    .header-account Meus Agendamentos
+                    .content-account 
+                      .tb-account
+                        .tb-account-cell 
+                          .tb-title Profissional
+                          .tb-content
+                            h3 Tania Ferreira
+                            p Esteticista
+                            p Estrela
+                        .tb-account-cell 
+                          .tb-title Serviços
+                          .tb-content
+                            h3 Massagem Modeladora
+                            p 25/10/2017 à 17:00
+                            p Minha Casa
 
-								li
-									input(type="radio" name="tabs2").tab-input#tab-dados
-									label(for="tab-dados").label-tab Dados Cadastrais
-									.tab-content
-										.header-account Meus Dados Cadastrais
-										.content-account
-											.tb-account
-												.tb-account-cell 
-													.tb-content
-														h4 Mantenha seu cadastro sempre atualizado
-														input(type="text" name="tabs2" placeholder="nome")
-														input(type="text" name="tabs2" placeholder="CPF")
-														input(type="text" name="tabs2" placeholder="e-mail")
-														input(type="text" name="tabs2" placeholder="telefone de contato")
-														button.btn Salvar
-												.tb-account-cell 
-													.tb-content
-														h4 Altere sua sennha
-														input(type="text" name="tabs2" placeholder="login")
-														input(type="password" name="tabs2" placeholder="password")
-														input(type="password" name="tabs2" placeholder="confirmpassword")
-														button.btn Confirmar
-														
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-dados
+                  label(for="tab-dados").label-tab Dados Cadastrais
+                  .tab-content
+                    .header-account Meus Dados Cadastrais
+                    .content-account
+                      .tb-account
+                        .tb-account-cell 
+                          .tb-content
+                            h4 Mantenha seu cadastro sempre atualizado
+                            input(type="text" name="tabs2" placeholder="nome")
+                            input(type="text" name="tabs2" placeholder="CPF")
+                            input(type="text" name="tabs2" placeholder="e-mail")
+                            input(type="text" name="tabs2" placeholder="telefone de contato")
+                            button.btn Salvar
+                        .tb-account-cell 
+                          .tb-content
+                            h4 Altere sua sennha
+                            input(type="text" name="tabs2" placeholder="login")
+                            input(type="password" name="tabs2" placeholder="password")
+                            input(type="password" name="tabs2" placeholder="confirmpassword")
+                            button.btn Confirmar
+                            
 
 
-								li
-									input(type="radio" name="tabs2").tab-input#tab-end
-									label(for="tab-end").label-tab Endereços
-									.tab-content.tab-address
-										.header-welcome
-											h2.title Olá Mariana!
-										.header-account
-											h3.title Meus endereços
-											h4.subtitle Informe abaixo o local onde deseja ser atendido, o profissional irá até o local.
-										.content-account
-											.register-address
-												form.form-address(action="")
-													fieldset.form-field
-														input.form-input(type="text" placeholder="Dê um nome ao endereço ex: Casa, Trabalho...")
-													fieldset.form-field
-														input.form-input(type="text" placeholder="Digite o CEP")
-													fieldset.form-field
-														input.form-input(type="text" placeholder="Logradouro")
-													fieldset.form-field
-														input.form-input(type="text" placeholder="Número")
-													fieldset.form-field
-														input.form-input(type="text" placeholder="Bairro")
-													fieldset.form-field
-														input.form-input(type="text" placeholder="Telefone de contato")
-													button.btn Salvar
-											.registered-address
-												h3.title Meus endereços:
-												.address.active
-													.address-header
-														h4.title Padrão
-														a.address-option.edit(href="") editar
-														a.address-option.delete(href="") excluir
-													.address-body
-														h5.title Minha casa
-														p.description Rua Maria Candida 358
-														p.description Vila Guilherme
-														p.description 11 941847444
-												.address
-													.address-header
-														h4.title Secundário
-														a.address-option.edit(href="") editar
-														a.address-option.delete(href="") excluir
-													.address-body
-														h5.title Minha casa
-														p.description Rua Maria Candida 358
-														p.description Vila Guilherme
-														p.description 11 941847444
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-end
+                  label(for="tab-end").label-tab Endereços
+                  .tab-content.tab-address
+                    .header-welcome
+                      h2.title Olá Mariana!
+                    .header-account
+                      h3.title Meus endereços
+                      h4.subtitle Informe abaixo o local onde deseja ser atendido, o profissional irá até o local.
+                    .content-account
+                      .register-address
+                        h3.title Novo endereço:
+                        form.form-address(action="")
+                          fieldset.form-field
+                            input.form-input(type="text" placeholder="Logradouro")
+                          fieldset.form-field
+                            input.form-input(type="text" placeholder="Número")
+                          fieldset.form-field
+                            input.form-input(type="text" placeholder="Tipo de logradouro")
+                          fieldset.form-field
+                            input.form-input(type="text" placeholder="Bairro")
+                          fieldset.form-field
+                            input.form-input(type="text" placeholder="Telefone de contato")
+                          fieldset.form-field
+                            input.form-input(type="text" placeholder="Digite o CEP")
+                          button.btn Salvar Dados
+                      .registered-address
+                        h3.title Meus endereços:
+                        .address.active
+                          .address-header
+                            h4.title Padrão
+                            .options
+                              a.address-option.edit(href="") editar
+                              a.address-option.delete(href="") excluir
+                          .address-body
+                            h5.title Minha casa
+                            p.description Rua Maria Candida 358
+                            p.description Vila Guilherme
+                            p.description 11 941847444
+                        .address
+                          .address-header
+                            h4.title Secundário
+                            .options
+                              a.address-option.edit(href="") editar
+                              a.address-option.delete(href="") excluir
+                          .address-body
+                            h5.title Minha casa
+                            p.description Rua Maria Candida 358
+                            p.description Vila Guilherme
+                            p.description 11 941847444
 
-								li
-									input(type="radio" name="tabs2").tab-input#tab-desc
-									label(for="tab-desc").label-tab Código de desconto
-									.tab-content
-										.header-account Meu Código de desconto
-										.content-account Lorem ipsum dolor sit amet
-					li
-						input(type="radio" name="tabs" id="tab2")
-						label(for="tab2" 	role="tab" aria-selected="false" aria-controls="panel2" tabindex="0") PROFISSIONAL
-						div( role="tabpanel" aria-labelledby="profissional"  aria-hidden="true")#tab-content2.tabs-content
-							ul.tab
-								li
-									input(type="radio" name="tabs2").tab-input#tab-agenda
-									label(for="tab-agenda").label-tab Agenda
-									.tab-content
-										.header-account Agenda Profissional
-										.content-account Lorem ipsum dolor sit amet
-								li
-									input(type="radio" name="tabs2").tab-input#tab-serv
-									label(for="tab-serv").label-tab Meus serviços
-									.tab-content
-										.header-account Serviços Prestados
-										.content-account Lorem ipsum dolor sit amet
-								li
-									input(type="radio" name="tabs2").tab-input#tab-hist
-									label(for="tab-hist").label-tab Histórico
-									.tab-content
-										.header-account Hitstórico de Atendimentos
-										.content-account Lorem ipsum dolor sit amet
-								li
-									input(type="radio" name="tabs2").tab-input#tab-prof
-									label(for="tab-prof").label-tab Dados profissionais
-									.tab-content
-										.header-account Meu Dados profissionais
-										.content-account Lorem ipsum dolor sit amet
-		include includes/footer.pug
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-desc
+                  label(for="tab-desc").label-tab Código de desconto
+                  .tab-content
+                    .header-account Meu Código de desconto
+                    .content-account Lorem ipsum dolor sit amet
+          li
+            input(type="radio" name="tabs" id="tab2")
+            label(for="tab2" 	role="tab" aria-selected="false" aria-controls="panel2" tabindex="0") PROFISSIONAL
+            div( role="tabpanel" aria-labelledby="profissional"  aria-hidden="true")#tab-content2.tabs-content
+              ul.tab
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-agenda
+                  label(for="tab-agenda").label-tab Agenda
+                  .tab-content
+                    .header-account Agenda Profissional
+                    .content-account Lorem ipsum dolor sit amet
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-serv
+                  label(for="tab-serv").label-tab Meus serviços
+                  .tab-content
+                    .header-account Serviços Prestados
+                    .content-account Lorem ipsum dolor sit amet
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-hist
+                  label(for="tab-hist").label-tab Histórico
+                  .tab-content
+                    .header-account Hitstórico de Atendimentos
+                    .content-account Lorem ipsum dolor sit amet
+                li
+                  input(type="radio" name="tabs2").tab-input#tab-prof
+                  label(for="tab-prof").label-tab Dados profissionais
+                  .tab-content
+                    .header-account Meu Dados profissionais
+                    .content-account Lorem ipsum dolor sit amet
+    include includes/footer.pug

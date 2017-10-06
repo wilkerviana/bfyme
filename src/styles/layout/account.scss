@@ -159,6 +159,20 @@ ul.tab{
             }
             &.tab-address{
               max-height: 100%;
+              & .header-welcome{
+                border-bottom: 20px solid rgba($scolor-lightgray,.1); 
+                margin: 0;
+                padding: 20px 30px;
+                > .title{color:#999;@include fontSite(titles,1.8em,wregular);}
+              }
+              & .header-account{
+                > .title{color:#999;@include fontSite(titles,1.6em,wregular);}
+                > .subtitle{color:#999;@include fontSite(titles,1.2em,wregular);}
+              }
+              & .content-account{
+                display: flex;
+                justify-content: space-around;
+              }
             }
         }
         .tab-input:checked ~  .label-tab {
@@ -203,10 +217,71 @@ ul.tab{
         }
     }  
 }
+.register-address{
+  width: 60%;
+  & .form-address{
+    > .form-field{
+      margin: 10px 10px 10px 0;
+    }
+    > .form-field .form-input{
+      border: 1px solid #999999;
+      color: #999999;
+    }
+    > .form-field:nth-child(1) ,
+    > .form-field:nth-child(2),
+    > .form-field:nth-child(6),
+    > .btn{
+      display: inline-block;
+    }
+    > .form-field:nth-child(1){
+      width: 61%;
+    }
+    > .form-field:nth-child(6){
+      margin-right: 38%;
+    }
+  }
+  & .title{
+    color: #999999;
+    @include fontSite(titles,1.2em,wregular);
+  }
+}
+.registered-address{
+  width: 30%;
+  & .address{
+    border: 1px solid #999999;
+    color: #999999;
+    margin: 10px 0;
+    padding: 10px 15px;
+    > .address-header{
+      border-bottom: 1px solid #999999;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      & .title{color:inherit;@include fontSite(titles,1.075em,wregular);}
+      & .address-option{margin: 0 5px;}
+    }
+    &.active{
+      color: $pcolor-lightpurple;
+      border: 1px solid $pcolor-lightpurple;
+    }
+    > .address-body{
+      margin: 10px 0;
+      > .title{color:inherit;@include fontSite(titles,1.2em,wregular);}
+      > .description{
+        margin: 2px 0;
+        padding: 0 !important;
+      }
+    }
+  }
+  & .title{
+    color: #999999;
+    @include fontSite(titles,1.2em,wregular);
+  }
+}
 .wrapper-account{
     width: 100vw;
-    height: 100vh;
-    background: rgba($scolor-lightgray,.2);
+    height: 760px;
+    background: rgba($scolor-lightgray,.1);
   }
 .wrapper-header-account {
     padding: 20px;
