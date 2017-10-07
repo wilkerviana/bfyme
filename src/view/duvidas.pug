@@ -4,8 +4,7 @@ html
     meta(name="viewport" content="width=device-width,initial-scale=1")
     title Bfy.me
     link(rel="stylesheet" href="css/styles.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
-  body
+  body#duvidas
     .foo.banner_default
       include includes/header.pug
       section.main-banner
@@ -16,7 +15,7 @@ html
         .container
           h3.title_default.clearflex Dúvidas
           h4.subtitle_default.clearflex Aqui estão as principais dúvidas
-          h4.title Clientes
+          h4.title_item Clientes
           .card.card-faq
             .card-head
               h5.title Como funciona?
@@ -38,4 +37,31 @@ html
               button.btn-plus +
             .card-details
               p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          h4.title_item Profissional
+          .card.card-faq
+            .card-head
+              h5.title Como funciona?
+              //- botao saiba mais
+              button.btn-plus +
+            .card-details
+              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .card.card-faq
+            .card-head
+              h5.title Como funciona?
+              //- botao saiba mais
+              button.btn-plus +
+            .card-details
+              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .card.card-faq
+            .card-head
+              h5.title Como funciona?
+              //- botao saiba mais
+              button.btn-plus +
+            .card-details
+              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .container.warn-quest
+        h1.title Ainda com dúvidas? Mande uma mensagem para nós!
+        button.btn Enviar mensagem
+    .modal-overlay
+    .modal
     include includes/footer.pug

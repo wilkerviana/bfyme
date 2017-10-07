@@ -1,7 +1,24 @@
+.quests{
+  margin: 40px 0;
+  .title_item{
+    color: $scolor-darkgray;
+    position: relative;
+    @include fontSite(titles,1.6em,wbold);
+    &:after{
+      background: $scolor-darkgold;
+      content: '';
+      height: 4px;
+      width: 30px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+}
 .card-faq{
   border: 1px solid $scolor-darkgray;
   max-height: 80px;
-  margin: 50px auto;
+  margin: 35px auto;
   padding: 10px 20px;
   overflow: hidden;
   transition: max-height .4s ease-in;
@@ -37,5 +54,15 @@
       color: $scolor-darkgray;
       @include fontSite(txt,1.2em,wlight);
     }
+  }
+}
+.warn-quest{
+  > .title{
+    color: #999;
+    @include fontSite(titles,2.6em,wregular);
+    text-align: center;
+  }
+  > .btn{
+    margin: 20px auto;
   }
 }
