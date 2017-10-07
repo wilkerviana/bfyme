@@ -1,0 +1,98 @@
+doctype
+html
+  head
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Bfy.me
+    link(rel="stylesheet" href="css/styles.css")
+  body
+    main.wrapper-schedule
+      .wrapper-header-schedule
+        .container-account
+          include includes/header.pug
+      .wrapper-schedule-content
+        .container
+          .schedule-item.schedule-header
+            h2.title <span>Olá Mariana</span>, confirme os dados do seu agendamento
+          .schedule-item.schedule-options
+            .option
+              span Serviço escolhido:
+              h3.title Alongamento de cílios
+            .option
+              span Dia:
+              input(type="date")
+            .option
+              span Horário
+              input(type="time")
+          .schedule-item.schedule-body
+            .content-schedule
+              .register-address
+                h3.title Novo endereço:
+                form.form-address(action="")
+                  fieldset.form-field
+                    input.form-input(type="text" placeholder="Logradouro")
+                  fieldset.form-field
+                    input.form-input(type="text" placeholder="Número")
+                  fieldset.form-field
+                    input.form-input(type="text" placeholder="Tipo de logradouro")
+                  fieldset.form-field
+                    input.form-input(type="text" placeholder="Bairro")
+                  fieldset.form-field
+                    input.form-input(type="text" placeholder="Telefone de contato")
+                  fieldset.form-field
+                    input.form-input(type="text" placeholder="Digite o CEP")
+                  span.about-address Por padrão o endereço é salvo automaticamente.
+                  button.btn(type="submit") Confirmar
+
+              .registered-address
+                h3.title Meus endereços:
+                .flex-address
+                  .address.active
+                    .address-header
+                      h4.title Usar este endereço
+                      .options
+                        a.address-option.edit(href="") editar
+                        a.address-option.delete(href="") excluir
+                    .address-body
+                      h5.title Minha casa
+                      p.description Rua Maria Candida 358
+                      p.description Vila Guilherme
+                      p.description 11 941847444
+                  .address
+                    .address-header
+                      h4.title Usar este endereço
+                      .options
+                        a.address-option.edit(href="") editar
+                        a.address-option.delete(href="") excluir
+                    .address-body
+                      h5.title Minha casa
+                      p.description Rua Maria Candida 358
+                      p.description Vila Guilherme
+                      p.description 11 941847444
+                  .address
+                    .address-header
+                      h4.title Usar este endereço
+                      .options
+                        a.address-option.edit(href="") editar
+                        a.address-option.delete(href="") excluir
+                    .address-body
+                      h5.title Minha casa
+                      p.description Rua Maria Candida 358
+                      p.description Vila Guilherme
+                      p.description 11 941847444
+                  .address
+                    .address-header
+                      h4.title Usar este endereço
+                      .options
+                        a.address-option.edit(href="") editar
+                        a.address-option.delete(href="") excluir
+                    .address-body
+                      h5.title Minha casa
+                      p.description Rua Maria Candida 358
+                      p.description Vila Guilherme
+                      p.description 11 941847444
+          .schedule-item.schedule-footer
+            .content-schedule
+              p.warn-schedule Estou ciente dos termos e regulamento.
+                | Ao clicar em agendar um profissional especializado será agendado e irá ao local escolhido no dia e hora desejado.
+              button.btn.confirm-schedule(type="submit") Agendar
+    include includes/footer.pug
