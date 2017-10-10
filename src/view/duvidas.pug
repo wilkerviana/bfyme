@@ -22,46 +22,67 @@ html
               //- botao saiba mais
               button.btn-plus +
             .card-details
-              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text Nosso e-commerce vende serviços de beleza delivery. O processo acontece desta forma: escolha a região que você está localizado, o serviço que deseja, o horário e o dia podendo agendar para o mesmo dia desde que seja com quatro horas de antecedência. O sistema vai buscar no nosso banco de talentos um profissional que atenda o serviço solicitado e que esteja ente 5 km a 8 km de distância do solicitante, ou seja, na mesma região.
           .card.card-faq
             .card-head
-              h5.title Como funciona?
+              h5.title Eu posso cancelar no mesmo dia do atendimento?
               //- botao saiba mais
               button.btn-plus +
             .card-details
-              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text Sim, porém existe uma taxa de cancelamento de serviço equivalente a 50% do valor do serviço contratado.
           .card.card-faq
             .card-head
-              h5.title Como funciona?
+              h5.title Quais são as formas de pagamento?
               //- botao saiba mais
               button.btn-plus +
             .card-details
-              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          h4.title_item Profissional
+              p.text Os pagamentos serão realizados integralmente pela plataforma do PagSeguro. Será aceito como forma de pagamento cartão de crédito e cartão de débito. Verifique no site do PagSeguro as operadoras de cartões aceitas.
           .card.card-faq
             .card-head
-              h5.title Como funciona?
+              h5.title Posso ser atendida novamente pelo mesmo profissional?
               //- botao saiba mais
               button.btn-plus +
             .card-details
-              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text Sim, você poderá ser atendida com o mesmo profissional nos próximos agendamentos.
+          h4.title_item Profissionais
           .card.card-faq
             .card-head
-              h5.title Como funciona?
+              h5.title Como eu faço meu cadastro?
               //- botao saiba mais
               button.btn-plus +
             .card-details
-              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text Clique na opção do menu "Seja um profissional" para de cadastrar na plataforma do Bfy.me. O cadastro é o primeiro passo para iniciar seu trabalho como prestador de serviço. Após o cadastro completo, você receberá um e-mail de confirmação de cadastro e os seguintes passos. Seu e-mail de cadastro como profissional também pode ser utilizado para agendar um serviço com outro profissional.
           .card.card-faq
             .card-head
-              h5.title Como funciona?
+              h5.title Eu posso cancelar um atendimento?
               //- botao saiba mais
               button.btn-plus +
             .card-details
-              p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text Após o match realizado e as mensagens de aviso, você terá 20 minutos para responder ao chamado. Caso não queira, o serviço será passado a diante. Cancelar um serviço após esse processo gera multa para o prestador de serviço equivalente a 50% do valor do serviço que deveria ser prestado.
+          .card.card-faq
+            .card-head
+              h5.title Eu posso fazer mais de um atendimento por dia?
+              //- botao saiba mais
+              button.btn-plus +
+            .card-details
+              p.text Nosso sistema busca trabalhar de forma que garanta que todos os profissionais cadastrados no raio de distância correspondente de cada área consigam atendimentos, logo isso pode variar. Considerando que todos os profissionais livres na instância solicitada serão considerados para a escolha de um prestador.
       .container.warn-quest
         h1.title Ainda com dúvidas? Mande uma mensagem para nós!
-        button.btn Enviar mensagem
+        button.btn.open-modal-faq Enviar mensagem
     .modal-overlay
     .modal
+      button.btn-close-modal
+      .container
+        form.form-faq
+          fieldset.form-field
+            label(for="") Digite seu nome
+            input(type="text")
+          fieldset.form-field
+            label(for="") Digite seu e-mail
+            input(type="text")
+          fieldset.form-field
+            label(for="") Digite o assunto da mensagem
+            input(type="text")
+          textarea.text-faq(name="", cols="30", rows="10")
+          button.btn(type="submit") Enviar
     include includes/footer.pug

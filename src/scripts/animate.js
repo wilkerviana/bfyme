@@ -1,43 +1,35 @@
-window.addEventListener('load',() => {
-  // menu hamburguer
-  const menuIcon = document.querySelector('.icon-hamburguer');
-  menuIcon.addEventListener('click',() => {
-    menuIcon.classList.toggle('active');
-    document.querySelector('.menu').classList.toggle('active');
-  });
-  
-  // accordion dúvidas
-  const cardQuest = document.querySelectorAll('.card-faq');
-  cardQuest.forEach(function(card) {
-    const elCard = card;
-    const btnQuest = card.children[0].childNodes[3];
-    btnQuest.addEventListener('click',() => {
-      elCard.classList.toggle('active');
-      if (elCard.className == 'card card-faq active') {
-        btnQuest.textContent = '-';
-      } else{
-        btnQuest.textContent = '+';
-      }
-    });
-   });
-   
-  // modal login
-  const btnLogin = document.querySelector('.btn-login2');
-  const modalLogin = document.querySelector('.modal');
-  const modalOverlay = document.querySelector('.modal-overlay');
-  
-  btnLogin.addEventListener('click',() => {
-    modalOverlay.classList.add('active');
-    modalLogin.classList.add('active');
-  });
-  modalOverlay.addEventListener('click',(event) => {
-    modalOverlay.classList.remove('active');
-    modalLogin.classList.remove('active');
-  });
-
-});
-
 $(document).ready(function(){
+  var nav = $('header');
+  
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 240) {
+      nav.addClass("fixed");
+    } else {
+      nav.removeClass("fixed");
+    }
+  });
+
+  // function for accordion
+  $('.btn-plus').click(function(){
+    var cardFaq = $(this).parent().parent();
+    cardFaq.toggleClass('active');
+    cardFaq.siblings().removeClass('active');
+    if (cardFaq.hasClass('active')) {
+      $(this).text('-');
+    } else{
+      $(this).text('+');
+    }
+  });
+
+  // function for open modal faq
+  $('.open-modal-faq').click(function(){
+    $('.modal-overlay , .modal').addClass('active');  
+  });
+  $('.modal-overlay').click(function(){
+    $('.modal-overlay , .modal').toggleClass('active');  
+  });
+
+
   $('.slider').slick({
     infinite: true,
     slidesToShow: 3,

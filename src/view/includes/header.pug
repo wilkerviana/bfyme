@@ -1,32 +1,27 @@
-header.header-flex
-  .container
-    .brand
-      img(src="images/bfyme.svg" alt="")
-    button.icon-menu
+header
+  .container-header
+    a(href="index.html").brand
+      svg
+        use(xlink:href="images/icons.svg#logo")
+    input(type="checkbox" id="label-login" name="login")
+    label(for="label-login").label-login
       span.icon-hamburguer
     nav.menu
-      span.title.hidden-lg Menu
       ul.menu-navegation
-        li.menu-item.link.hidden-lg Entrar
-        li.menu-item.link
-          a.menu-link(href="#") Serviços
-          ul.dropdown
-            li.menu-item-dropdown
-              a.menu-link-dropdown(href="") Maquiagem
-            li.menu-item-dropdown
-              a.menu-link-dropdown(href="") Massagem
-            li.menu-item-dropdown
-              a.menu-link-dropdown(href="") Manicure
-            li.menu-item-dropdown
-              a.menu-link-dropdown(href="") Podologia
-            li.menu-item-dropdown
-              a.menu-link-dropdown(href="") Penteado
-        li.menu-item.link 
-          a.menu-link(href="#") Dúvidas
-        li.menu-item.link
-          a.menu-link(href="#") Seja um profissional
-    a(href="#login").btn.btn-login Entrar
-    input(type="checkbox" name="menu-account" id="menu-account")
+        li.item.hidden-lg 
+          a(href="login.html") Entrar
+        li.item.servicos: a(href="#dropdown") Serviços
+          .icon-arrow
+          #dropdown
+              a.menu-link-dropdown(href="servicos.html") Maquiagem
+              a.menu-link-dropdown(href="servicos.html") Massagem
+              a.menu-link-dropdown(href="servicos.html") Manicure
+              a.menu-link-dropdown(href="servicos.html") Podologia
+              a.menu-link-dropdown(href="servicos.html") Penteado
+        li.item: a(href="duvidas.html") Dúvidas
+        li.item: a(href="profissional.html") Seja um profissional
+    a(href="login.html").btn.btn-login Entrar
+    //input(type="checkbox" name="menu-account" id="menu-account")
     //label(for="menu-account").btn.btn-login.label-menu-account
       | Olá, Mariana
       .arrow-menu

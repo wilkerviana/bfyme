@@ -23,7 +23,7 @@
   overflow: hidden;
   transition: max-height .4s ease-in;
   &.active{
-    max-height: 300px;
+    max-height: 1200px;
     overflow: inherit;
     > .card-details{
       opacity: 1;

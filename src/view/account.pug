@@ -6,10 +6,10 @@ html
     title Bfy.me - Minha Conta
     link(rel="stylesheet" href="css/styles.css")
   body
+    include includes/header.pug
     main.wrapper-account
       .wrapper-header-account
         .container-account
-          include includes/header.pug
       .container-account
         ul(role="tablist").tabs
           li
@@ -28,13 +28,13 @@ html
                           .tb-title Profissional
                           .tb-content
                             h3 Tania Ferreira
-                            p Esteticista
+                            p Manicure
                             p Estrela
                         .tb-account-cell 
                           .tb-title Serviços
                           .tb-content
-                            h3 Massagem Modeladora
-                            p 25/10/2017 à 17:00
+                            h3 Maquiagem Simples
+                            p 09/10/2017 à 17:00
                             p Minha Casa
 
                 li
@@ -47,17 +47,17 @@ html
                         .tb-account-cell 
                           .tb-content
                             h4 Mantenha seu cadastro sempre atualizado
-                            input(type="text" name="tabs2" placeholder="nome")
+                            input(type="text" name="tabs2" placeholder="Nome")
                             input(type="text" name="tabs2" placeholder="CPF")
-                            input(type="text" name="tabs2" placeholder="e-mail")
-                            input(type="text" name="tabs2" placeholder="telefone de contato")
+                            input(type="text" name="tabs2" placeholder="E-mail")
+                            input(type="text" name="tabs2" placeholder="Telefone de contato")
                             button.btn Salvar
                         .tb-account-cell 
                           .tb-content
                             h4 Altere sua sennha
-                            input(type="text" name="tabs2" placeholder="login")
-                            input(type="password" name="tabs2" placeholder="password")
-                            input(type="password" name="tabs2" placeholder="confirmpassword")
+                            input(type="text" name="tabs2" placeholder="Login")
+                            input(type="password" name="tabs2" placeholder="Senha")
+                            input(type="password" name="tabs2" placeholder="Confirme sua senha")
                             button.btn Confirmar
                             
 
@@ -80,11 +80,11 @@ html
                           fieldset.form-field
                             input.form-input(type="text" placeholder="Número")
                           fieldset.form-field
+                            input.form-input(type="text" placeholder="Complemento")
+                          fieldset.form-field
                             input.form-input(type="text" placeholder="Tipo de logradouro")
                           fieldset.form-field
                             input.form-input(type="text" placeholder="Bairro")
-                          fieldset.form-field
-                            input.form-input(type="text" placeholder="Telefone de contato")
                           fieldset.form-field
                             input.form-input(type="text" placeholder="Digite o CEP")
                           button.btn Salvar Dados

@@ -130,6 +130,9 @@
     background: $pcolor-pink;
     clip-path: polygon(0 0,100% 0%,100% 100%, 0 70%);
     height: 260px;
+    > picture img{
+      width: 130%;
+    }
   }
   > .service-details{
     color: $scolor-darkgray;
@@ -151,6 +154,7 @@
       color: $pcolor-lightpurple;
       margin: 15px auto;
       @include btnSite(white,$pcolor-lightpurple);
+      > a{color: inherit;}
     }
   }
 }
@@ -178,7 +182,7 @@
       overflow: hidden;
       height: 150px;
       width: 150px;
-      img{width: 150%;}
+      img{width: 100%;}
     }
     > .description{
       @include fontSite(txt,1em,wthin);

@@ -284,8 +284,8 @@ ul.tab{
     background: rgba($scolor-lightgray,.1);
   }
 .wrapper-header-account {
-    padding: 20px;
-    background-image: linear-gradient(to right, $pcolor-pink, $pcolor-pink,$pcolor-lightpurple,$pcolor-lightpurple);
+    margin: 100px 0 0;
+    padding: 20px 0;
     display: block;
     margin-bottom: 20px;
 
@@ -318,7 +318,6 @@ ul.tab{
             display: table-cell;
             text-align: left;
             vertical-align: middle;
-            background: #f00;
             border-left: 1px solid#ddd;
             @media (max-width: 600px) {
                 display: block;
@@ -329,9 +328,6 @@ ul.tab{
                 .tb-title{
                     border-left: 0;
                 }
-            }
-            &:nth-child(2) {
-                background: #ff0;
             }
         }
     }

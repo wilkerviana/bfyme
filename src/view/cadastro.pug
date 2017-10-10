@@ -1,0 +1,41 @@
+doctype
+html
+  head
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Bfy.me
+    link(rel="stylesheet" href="css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
+  body
+    .foo
+      .foo-login
+      .container
+        .modal-login
+          .modal-image
+            h1.title Entre e aproveite nossos serviços
+            h2.subtitle Sua beleza a toda hora
+          form.modal-form.register-form(action="cadastroServlet" method="post")
+            h3.title Cadastro de novo usuário
+            fieldset.register-field
+              label.login-label(for="nomeCadastro") Qual seu nome?
+              input.login-input(type="text" name="nomeCadastro" id="nomeCadastro" placeholder="Digite seu nome" required)
+            fieldset.register-field
+              label.login-label(for="usuarioCadastro") Crie um nome de usuário
+              input.login-input(type="text" name="usuarioCadastro" id="usuarioCadastro" placeholder="Digite um nome de usuário" required)
+            fieldset.register-field
+              label.login-label(for="emailCadastro") Qual seu e-mail?
+              input.login-input(type="text" name="emailCadastro" id="emailCadastro" placeholder="Digite seu e-mail" required)
+            fieldset.register-field
+              label.login-label(for="dataNascCadastro") Data de Nascimento
+              input.login-input(type="date" name="dataNascCadastro" id="dataNascCadastro" placeholder="Digite seu e-mail" required)
+            fieldset.register-field
+              label.login-label(for="cpfCadastro") Informe seu CPF
+              input.login-input(type="text" name="cpfCadastro" id="cpfCadastro" placeholder="Digite seu CPF" required)
+            fieldset.register-field
+              label.login-label(for="senhaCadastro") Crie sua senha
+              input.login-input(type="password" name="senhaCadastro" id="senhaCadastro" placeholder="Digite sua senha" required)
+            fieldset.register-field
+              label.login-label(for="senhaConfirma") Confirme sua senha
+              input.login-input(type="password" name="senhaConfirma" id="senhaConfirma" placeholder="Digite novamente sua senha" required)
+            button.btn(type="submit") Salvar meus dados
+        button.btn.btn-back-login
+          a(href="index.html") Voltar

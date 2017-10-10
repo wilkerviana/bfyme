@@ -1,55 +1,79 @@
 #login   
     article
-        .content
-            a.bt-close-login(href="#")
-            h3 Login
-            a.bt-facebook
-                svg
-                    use(xlink:href="images/icons.svg#facebook")
-                span Entre com Facebook
-            .line   
-                span OU         
-            .forms   
-                input(type="text" name="nome" class="input-text" id="nome" required autocomplete="off")
-                label(for="nome").label-form 
-                    span Qual seu e-mail?
-                    .bd
-            .forms      
-                input(type="password" name="senha" class="input-text" id="senha" required autocomplete="off")
-                label(for="senha").label-form 
-                    span Qual sua senha?
-                    .bd
-            button(type="submit").btn ENTRAR
+        form(action="LoginUsuario" method="post")
+            //.error Usuário e/ou senha inválido(s)
+            .content 
+                a.bt-close-login(href="#")
+                h3 Login
+                //a.bt-facebook
+                    svg
+                        use(xlink:href="images/icons.svg#facebook")
+                    span Entre com Facebook
+                //.line   
+                    span OU         
+                .forms   
+                    input(type="text" name="txtUsuario" class="input-text" id="txtUsuario" required autocomplete="off")
+                    label(for="txtUsuario").label-form 
+                        span Qual seu usuário?
+                        .bd
+                .forms      
+                    input(type="password" name="senha" class="input-text" id="senha" required autocomplete="off")
+                    label(for="senha").label-form 
+                        span Qual sua senha?
+                        .bd
+                button(type="submit").btn ENTRAR
         .password
             a(href="") Esqueceu sua senha? Clique aqui
         a.bottom(href="#register") Não é cadastrado? CLIQUE AQUI
 #register   
     article
-        .content
-            a.bt-close-login(href="#")
-            h3 Cadastro
-            a.bt-facebook
-                svg
-                    use(xlink:href="images/icons.svg#facebook")
-                span Cadastre com Facebook
-            .line   
-                span OU      
-            .forms   
-                input(type="text" name="nomeCadastro" class="input-text" id="nomeCadastro"  required autocomplete="off")
-                label(for="nomeCadastro").label-form 
-                    span Qual seu nome?
-                    .bd   
-            .forms   
-                input(type="text" name="emailCadastro" class="input-text" id="emailCadastro" required autocomplete="off")
-                label(for="emailCadastro").label-form 
-                    span Qual seu e-mail?
-                    .bd
-            .forms      
-                input(type="password" name="senhaCadastro" class="input-text" id="senhaCadastro" required autocomplete="off")
-                label(for="senhaCadastro").label-form 
-                    span Crie uma senha
-                    .bd
-            button(type="submit").btn CADASTRAR
+        form(action="CadastroUsuario" method="post")
+            //.error Usuário e/ou senha inválido(s)
+            .content
+                a.bt-close-login(href="#")
+                h3 Cadastro
+                //a.bt-facebook
+                    svg
+                        use(xlink:href="images/icons.svg#facebook")
+                    span Cadastre com Facebook
+                //.line   
+                    span OU      
+                .forms   
+                    input(type="text" name="nomeCadastro" class="input-text" id="nomeCadastro"  required autocomplete="off")
+                    label(for="nomeCadastro").label-form 
+                        span Qual seu nome?
+                        .bd   
+                .forms   
+                    input(type="text" name="usuarioCadastro" class="input-text" id="usuarioCadastro" required autocomplete="off")
+                    label(for="usuarioCadastro").label-form 
+                        span Crie um nome de usuário
+                        .bd
+                .forms   
+                    input(type="text" name="emailCadastro" class="input-text" id="emailCadastro" required autocomplete="off")
+                    label(for="emailCadastro").label-form 
+                        span Qual seu e-mail?
+                        .bd
+                .forms   
+                    input(type="text" name="dataNascCadastro" class="input-text" id="dataNascCadastro" required autocomplete="off")
+                    label(for="dataNascCadastro").label-form 
+                        span Data de Nascimento
+                        .bd
+                .forms   
+                    input(type="text" name="cpfCadastro" class="input-text" id="cpfCadastro" required autocomplete="off")
+                    label(for="cpfCadastro").label-form 
+                        span Informe seu CPF
+                        .bd
+                .forms      
+                    input(type="password" name="senhaCadastro" class="input-text" id="senhaCadastro" required autocomplete="off")
+                    label(for="senhaCadastro").label-form 
+                        span Crie uma senha
+                        .bd
+                .forms      
+                    input(type="password" name="senhaConfirma" class="input-text" id="senhaConfirma" required autocomplete="off")
+                    label(for="senhaConfirma").label-form 
+                        span Crie uma senha
+                        .bd
+                button(type="submit").btn CADASTRAR
         .password
             a(href="") Esqueceu sua senha? Clique aqui
         a.bottom(href="#login") ACESSAR MINHA CONTA

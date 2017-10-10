@@ -2,7 +2,6 @@
   background: rgba($scolor-lightgray,.1);
 }
 .wrapper-header-schedule{
-  background-image: linear-gradient(to right, $pcolor-pink, $pcolor-pink,$pcolor-lightpurple,$pcolor-lightpurple);
   display: block;
   padding: 20px;
 }
@@ -90,5 +89,6 @@
   > .confirm-schedule{
     background: $pcolor-pink;
     color: white;
+    a{color: inherit;}
   }
 }

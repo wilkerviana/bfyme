@@ -6,7 +6,6 @@ html
     link(rel="stylesheet" href="css/styles.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
   body
-    include includes/login.pug
     .foo.banner.banner_default
       include includes/header.pug
       section.main-banner
@@ -56,63 +55,58 @@ html
           article.item-slider
             .service-image
               picture
-                img(src="images/services/skin.jpg" alt="Limpeza de pele")
+                img(src="images/services/skin.jpg" alt="Massoterapia")
             .service-details
               h5.subtitle A partir de
-                <br/> R$<span>70,00</span>
-              h4.title Limpeza de pele
-              p.description Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Agendar
+                <br/> R$ <span>140,00</span>
+              h4.title Massoterapia
+              p.description Direcionada de acordo com a necessidade do cliente.
+              button.btn
+                a(href="servicos.html") Agendar
           article.item-slider
             .service-image
               picture
-                img(src="images/services/skin.jpg" alt="Limpeza de pele")
+                img(src="images/services/makeup.jpg" alt="Maquiagem Simples")
             .service-details
               h5.subtitle A partir de
-                <br/> R$<span>70,00</span>
-              h4.title Limpeza de pele
-              p.description Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Agendar
+                <br/> R$ <span>30,00</span>
+              h4.title Maquiagem Simples
+              p.description Moderna e com requinte para você curtir qualquer evento.
+              button.btn
+                a(href="servicos.html") Agendar
           article.item-slider
             .service-image
               picture
-                img(src="images/services/skin.jpg" alt="Limpeza de pele")
+                img(src="images/services/nailmaker.jpg" alt="Manicure Simples")
             .service-details
               h5.subtitle A partir de
-                <br/> R$<span>70,00</span>
-              h4.title Limpeza de pele
-              p.description Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Agendar
+                <br/> R$ <span>25,00</span>
+              h4.title Manicure Simples
+              p.description Realizado a limpeza das unhas e esmaltação.
+              button.btn
+                a(href="servicos.html") Agendar
           article.item-slider
             .service-image
               picture
-                img(src="images/services/skin.jpg" alt="Limpeza de pele")
+                img(src="images/services/oil-masseur.jpg" alt="Massagem Relaxante")
             .service-details
               h5.subtitle A partir de
-                <br/> R$<span>70,00</span>
-              h4.title Limpeza de pele
-              p.description Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Agendar
+                <br/> R$ <span>60,00</span>
+              h4.title Massagem Relaxante
+              p.description Aumenta a circulação sanguínea, alivia o stress e tensão muscular.
+              button.btn
+                a(href="servicos.html") Agendar
           article.item-slider
             .service-image
               picture
-                img(src="images/services/skin.jpg" alt="Limpeza de pele")
+                img(src="images/services/clean-face.jpg" alt="Limpeza de pele")
             .service-details
               h5.subtitle A partir de
-                <br/> R$<span>70,00</span>
+                <br/> R$ <span>80,00</span>
               h4.title Limpeza de pele
-              p.description Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Agendar
-          article.item-slider
-            .service-image
-              picture
-                img(src="images/services/skin.jpg" alt="Limpeza de pele")
-            .service-details
-              h5.subtitle A partir de
-                <br/> R$ <span> 70,00</span>
-              h4.title Limpeza de pele
-              p.description Lorem ipsum lorem ipsum lorem ipsum
-              button.btn Agendar
+              p.description Para desobstruir os poros, extrair comedões e espinhas
+              button.btn
+                a(href="servicos.html") Agendar
     //- SECTION DEPOIMENTOS
     section.foo.depositions
       .container
@@ -121,17 +115,17 @@ html
           h4.subtitle_default.clearflex O que dizem dos nossos serviços
           article.flexchild.item
             picture.profile-img
-              img(src="images/profiles/beautiful-woman.jpg" alt="")
+              img(src="images/profiles/beautiful-woman_3.jpg" alt="")
             p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
             h5.author Mariana Roussef - <span>São Paulo</span>
           article.flexchild.item
             picture.profile-img
-              img(src="images/profiles/beautiful-woman.jpg" alt="")
+              img(src="images/profiles/beautiful-woman_2.jpg" alt="")
             p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
             h5.author Mariana Roussef - <span>São Paulo</span>
           article.flexchild.item
             picture.profile-img
-              img(src="images/profiles/beautiful-woman.jpg" alt="")
+              img(src="images/profiles/beautiful-woman_3.jpg" alt="")
             p.description Usei o Bfy.me para fazer uma massagem relaxante e depilação. Amei o serviço, pois atendeu na minha casa e a profissional foi competente com seu trabalho.
             h5.author Mariana Roussef - <span>São Paulo</span>
     .modal-overlay

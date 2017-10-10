@@ -1,0 +1,30 @@
+doctype
+html
+  head
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Bfy.me
+    link(rel="stylesheet" href="css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
+  body
+    .foo
+      .foo-login
+      .container
+        .modal-login
+          .modal-image
+            h1.title Entre e aproveite nossos serviços
+            h2.subtitle Sua beleza a toda hora
+          form.modal-form(action="login" method="post")
+            h3.title Login
+            fieldset.login-field
+              label.login-label(for="txtUsuario") Usuário
+              input.login-input(type="text" name="txtUsuario" id="txtUsuario" placeholder="Digite seu usuário" required)
+            fieldset.login-field
+              label.login-label(for="senha") Senha
+              input.login-input(type="password" name="senha" id="senha" placeholder="Digite sua senha" required)
+            button.btn
+              a(href="account.html") Entrar
+            a.forgot-psw(href="#") Esqueci minha senha!
+            span.do-account Ainda não tem cadastro? 
+              a(href="cadastro.html") Clique aqui
+        button.btn.btn-back-login
+          a(href="index.html") Voltar

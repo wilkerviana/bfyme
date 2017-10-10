@@ -5,10 +5,10 @@ html
     title Bfy.me
     link(rel="stylesheet" href="css/styles.css")
   body
+    include includes/header.pug
     main.wrapper-schedule
       .wrapper-header-schedule
         .container-account
-          include includes/header.pug
       .wrapper-schedule-content
         .container
           .schedule-item.schedule-header
@@ -16,7 +16,7 @@ html
           .schedule-item.schedule-options
             .option
               span Serviço escolhido:
-              h3.title Alongamento de cílios
+              h3.title Maquiagem simples
             .option
               span Dia:
               input(type="date")
@@ -33,11 +33,11 @@ html
                   fieldset.form-field
                     input.form-input(type="text" placeholder="Número")
                   fieldset.form-field
+                    input.form-input(type="text" placeholder="Complemento")
+                  fieldset.form-field
                     input.form-input(type="text" placeholder="Tipo de logradouro")
                   fieldset.form-field
                     input.form-input(type="text" placeholder="Bairro")
-                  fieldset.form-field
-                    input.form-input(type="text" placeholder="Telefone de contato")
                   fieldset.form-field
                     input.form-input(type="text" placeholder="Digite o CEP")
                   span.about-address Por padrão o endereço é salvo automaticamente.
@@ -94,5 +94,6 @@ html
             .content-schedule
               p.warn-schedule Estou ciente dos termos e regulamento.
                 | Ao clicar em agendar um profissional especializado será agendado e irá ao local escolhido no dia e hora desejado.
-              button.btn.confirm-schedule(type="submit") Agendar
+              button.btn.confirm-schedule
+                a(href="account.html") Agendar
     include includes/footer.pug

@@ -67,7 +67,7 @@ gulp.task('script',() => {
 });
 
 gulp.task('images',() => {
-  gulp.src('src/images/**/*')
+  gulp.src('src/images/**/*', !'src/images/**/*.svg')
       .pipe(imagemin())
       .pipe(gulp.dest('dist/images'))
 });
