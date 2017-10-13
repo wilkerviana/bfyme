@@ -49,7 +49,7 @@
   color: $scolor-darkgray;
   position: relative;
   text-align: center;
-  @include fontSite(titles,2.8em,wbold);
+  @include fontSite(titles,2.2em,wbold);
   &:after{
     background: $scolor-darkgold;
     content: '';
@@ -62,9 +62,9 @@
 }
 .subtitle_default{
   color: $scolor-darkgold;
-  margin: 15px 0;
+  margin: 20px 0;
   text-align: center;
-  @include fontSite(txt,1.125em,wregular);
+  @include fontSite(txt,1.1em,wsemibold);
 }
 
 .btn{
