@@ -1,0 +1,13 @@
+.cta_profissional{
+  background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8));
+  padding: 60px 0;
+  text-align: center;
+  > .title{
+    @include fontSite(titles,2.6em,wregular);
+  }
+  > .btn{
+    background: white;
+    border: 0;
+    color: $pcolor-pink;
+  }
+}

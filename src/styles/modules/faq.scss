@@ -66,3 +66,29 @@
     margin: 20px auto;
   }
 }
+.modal-faq{
+  height: auto;
+  padding: 16px;
+  top: 18% !important;
+}
+.form-faq{
+  > .title{color:$pcolor-lightpurple;padding:0 0 10px;@include fontSite(titles,1.2em,wregular);}
+  > .form-field{
+    margin: 10px 0;
+    position: relative;
+    > label{display: block;color:$pcolor-pink;margin:0;}
+    > input{
+      border: none;
+      border-bottom: 1px solid #999;
+      padding: 6px 0;
+    }
+    > .error{color: #ccc;position: absolute;top: 0;right: 0;}
+    .message-faq{
+      border: 1px solid #999;
+      height: 160px;
+      margin-top: 6px;
+      resize: none;
+      width: 100%;
+    }
+  }
+}

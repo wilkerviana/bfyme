@@ -3,76 +3,36 @@ html
   head
     meta(name="viewport" content="width=device-width,initial-scale=1")
     title Bfy.me
-    link(rel="stylesheet" href="css/main.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css")
-  body
-    .foo.banner_default.banner-profissional
-      header.header-flex
-        .container
-          .brand
-            img(src="images/bfyme.svg" alt="")
-          button.icon-menu
-            span.icon-hamburguer
-          nav.menu
-            span.title.hidden-lg Menu
-            ul.menu-navegation
-              li.menu-link.link.hidden-lg Entrar
-              li.menu-link.link Serviços
-              li.menu-link.link Dúvidas
-              li.menu-link.link Seja um profissional
-          button.btn.btn-login Entrar
-      .main-banner
-        h2.title.title_banner Aumente sua renda de forma rápida e fácil
-        h3.subtitle.subtitle_banner Somos a ligação que faltava entre você e uma grande quantidade de clientes em busca de serviços de beleza. Nossa plataforma faz a distribuição de agendamentos para os profissionais cadastrados na plataforma de forma que todos tenham oportunidade de atender clientes constantemente.
-    section.be-profissional
-      .profissional.wrapper-flex.advantages
-        h3.title.clearflex Benefícios
-        h4.subtitle.clearflex Descubra as vantagens de atender pelo Bfy.me
-        .flexchild
-          h5.title Titulo
-          p.description It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. 
-        .flexchild
-          h5.title Titulo
-          p.description It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. 
-        .flexchild
-          h5.title Titulo
-          p.description It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. 
-        .flexchild
-          h5.title Titulo
-          p.description It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. 
-      .profissional.wrapper-flex.how_it_works
-        h3.title.clearflex Como funciona?
-        h4.subtitle.clearflex É muito simples e fácil de usar, veja abaixo como
-        .flexchild
-          h5.title Compromisso
-          p.description Assim que o cliente finalizar o agendamento e seu pagamento enviaremos imediatamente a você a confirmação com todos os dados do serviço.
-        .flexchild
-          h5.title Vantagem
-          p.description Assim que o cliente finalizar o agendamento e seu pagamento enviaremos imediatamente a você a confirmação com todos os dados do serviço.
-        .flexchild
-          h5.title Tempo
-          p.description Assim que o cliente finalizar o agendamento e seu pagamento enviaremos imediatamente a você a confirmação com todos os dados do serviço.
-    section.foo.mini-banner-pro
-      h2.title Conheça todas as nossas vantagens, seja nosso parceiro.
-      button.btn Cadastre-se já
-    footer.foo
+    link(rel="stylesheet" href="css/styles.css")
+  body#duvidas
+    .foo.banner_default
+      include includes/header.pug
+      section.main-banner
+        h2.title_default.title_banner Seja um Profissional
+        h3.subtitle_default.subtitle_banner Lorem ipsum lorem ipsum lorem ipsum
+    section.profissional
       .container
-        .wrapper-flex.footer
-          .brand
-            h1.title Bfy.me
-          .social
-            .icons
-              a.social-link(href="")
-                img(src="" alt="Facebook")
-              a.social-link(href="")
-                img(src="" alt="Google Plus")
-              a.social-link(href="")
-                img(src="" alt="Instagram")
-              a.social-link(href="")
-                img(src="" alt="Twitter")
-            span Bfy.me - Todos os direitos reservados 2017
-    
-    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
-    script(src="https://code.jquery.com/jquery-migrate-3.0.0.min.js")
-    script(src="js/main.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js")
+        h3.title_default.clearflex Como funciona para o profissional?
+        h4.subtitle_default.clearflex Processos simples que trazem uma renda extra
+        .item-profissional
+          h5.title Match
+        .item-profissional
+          h5.title Ordem de Serviço
+        .item-profissional
+          h5.title Comissão
+    section.cta_profissional
+      h1.title Conheça todas as nossas vantagens. Seja nosso parceiro.
+      button.btn Seja um parceiro Bfy.me
+    section.advantages
+      h3.title_default.clearflex Vantagens
+      h4.subtitle_default.clearflex É muito simples de usar, vaja abaixo as dicas
+      article.card-profissional
+        h5.title Compromisso
+        p.description Assim que o cliente finalizar o agendamento e seu pagamento enviaremos imediatamente a você a confirmação com todos os dados do serviço.
+      article.card-profissional
+        h5.title Controle
+        p.description Assim que o cliente finalizar o agendamento e seu pagamento enviaremos imediatamente a você a confirmação com todos os dados do serviço.
+      article.card-profissional
+        h5.title Tempo
+        p.description Assim que o cliente finalizar o agendamento e seu pagamento enviaremos imediatamente a você a confirmação com todos os dados do serviço.
+    include includes/footer.pug

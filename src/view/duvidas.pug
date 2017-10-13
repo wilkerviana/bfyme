@@ -70,19 +70,25 @@ html
         h1.title Ainda com dúvidas? Mande uma mensagem para nós!
         button.btn.open-modal-faq Enviar mensagem
     .modal-overlay
-    .modal
+    .modal.modal-faq
       button.btn-close-modal
       .container
         form.form-faq
+          h2.title Formulário de mensagem
           fieldset.form-field
             label(for="") Digite seu nome
-            input(type="text")
+            span.error
+            input.input_name(type="text" name="name")
           fieldset.form-field
             label(for="") Digite seu e-mail
-            input(type="text")
+            span.error
+            input.input_email(type="text" name="email")
           fieldset.form-field
             label(for="") Digite o assunto da mensagem
-            input(type="text")
-          textarea.text-faq(name="", cols="30", rows="10")
-          button.btn(type="submit") Enviar
+            span.error
+            input.input_subject(type="text" name="subject")
+          fieldset.form-field
+            label(for="") Escreva sua mensagem
+            textarea.message-faq(name="message", cols="30", rows="10")
+          button.btn.btn-submit(type="submit") Enviar
     include includes/footer.pug
