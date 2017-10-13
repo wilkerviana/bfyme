@@ -13,11 +13,26 @@ header
         li.item.servicos: a(href="#dropdown") Serviços
           .icon-arrow
           #dropdown
-              a.menu-link-dropdown(href="servicos.html") Maquiagem
-              a.menu-link-dropdown(href="servicos.html") Massagem
-              a.menu-link-dropdown(href="servicos.html") Manicure
-              a.menu-link-dropdown(href="servicos.html") Podologia
-              a.menu-link-dropdown(href="servicos.html") Penteado
+              a.menu-link-dropdown(href="servicos.html") 
+                | Maquiagem
+                svg
+                  use(xlink:href="images/icons.svg#maquiagem")
+              a.menu-link-dropdown(href="servicos.html") 
+                | Massagem
+                svg
+                  use(xlink:href="images/icons.svg#massagem")
+              a.menu-link-dropdown(href="servicos.html") 
+                | Manicure
+                svg
+                  use(xlink:href="images/icons.svg#manicure") 
+              a.menu-link-dropdown(href="servicos.html") 
+                | Podologia
+                svg
+                  use(xlink:href="images/icons.svg#podologia")
+              a.menu-link-dropdown(href="servicos.html") 
+                | Penteado
+                svg
+                  use(xlink:href="images/icons.svg#penteado")
         li.item: a(href="duvidas.html") Dúvidas
         li.item: a(href="profissional.html") Seja um profissional
     a(href="login.html").btn.btn-login Entrar

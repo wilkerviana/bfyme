@@ -1,29 +1,42 @@
 .banner-services{
-  padding: 40px 0;
+  padding: 120px 0 30px;
 }
-.services-form{
-  display: block;
-  margin: 40px 0;
-  padding: 20px 0;
-  @media(min-width:768px){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  > .field{
-    width: 90%;
-    > .input-form{
-      border: 0;
-      border-bottom: 1px solid #bbbbbb;
-      font-size: 1em;
-      padding: 8px 12px 8px 0;
-      width: 90%;
+.services-filter{
+  text-align: center;
+  .services-form{
+    display: block; 
+    > .field{   
+      display: inline-block;
+      width: 100%;
+      @media (min-width:768px) {
+        width: 600px;
+        margin-right: 15px;
+        
+      }
+      > .input-form{
+        border: 0;
+        border-bottom: 1px solid #bbbbbb;
+        @include fontSite(txt,1.2em,wsemibold);
+        padding: 8px 12px 8px 0;
+        width: 100%;
+        transition: all .3s ease;
+        &:focus{
+          transition: all .3s ease;
+          border-bottom: 1px solid $pcolor-pink;
+        }
+      }
     }
-  }
-  > .btn{
-    color: $pcolor-lightpurple;
-    margin: 20px auto;
-    @include btnSite(transparent,$pcolor-lightpurple);
+    > .btn{
+      color: $pcolor-lightpurple;
+      margin: 20px auto;
+      @include btnSite(transparent,$pcolor-lightpurple);
+      vertical-align: middle;
+      display: inline-block;
+      width: 90%;
+      @media (min-width:768px) {
+        width: auto;
+      }
+    }
   }
 }
 .services-box{

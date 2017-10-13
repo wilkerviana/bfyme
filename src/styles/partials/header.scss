@@ -4,6 +4,7 @@
         background: white;
         transition: all .2s ease;
         border-bottom: 1px solid rgba($pcolor-lightpurple, .2);
+        z-index: 15;
         .container-header{
             .brand{
                 svg{
@@ -43,29 +44,36 @@
         }
     }
 }
-.foo header{background: transparent;}
-.foo header.fixed{background: white;}
 header {
-    background: linear-gradient(to right,rgba(152,6,110,.8) ,rgba(31,13,85,.8));
-    position: relative;
-    width: 100vw;
+    position: absolute;
+    width: 100%;
     top: 0;
     z-index: 10;
-    padding: 50px 0;
+    padding: 10px 0;
     display: block;
+    height: 90px;
+    background: transparent;
     ////////////////////////////////// CONTAINER
     .container-header{  
         height: 100%;
-        width: 100vw;
+        width: 100%;
         padding:0;
         ////////////////////////////LOGO
         .brand{
             @include centerv();
-            left: 2vw;
+            left: 0;
+            width: 200px;
+            height: 45px;
+            cursor: pointer;
+            z-index: 10;
             svg{
                 fill: white;
                 width: 200px;
                 height: 45px;
+                cursor: pointer;
+            }
+            @media (min-width:900px) {
+                left: 2vw;
             }
         }
         ///////////////////////////////// BOTÃO ENTRAR
@@ -79,6 +87,7 @@ header {
                 display: inline-block;
                 @include centerv();  
                 right: 5vw;
+                @include fontSite(titles,1.1em,wsemibold);
             }
             &:hover{
                 background: white;
@@ -269,9 +278,16 @@ header {
                         visibility: hidden;
                         transition: all .1s ease-out;
                         height: 0;
-                        a{
+                        a.menu-link-dropdown{
                           color:  white;
                           display: block;
+                          svg {
+                              width:55px;
+                              height: 35px;
+                              display: inline-block;
+                              vertical-align: middle;
+                              fill:white;
+                          }
                         }
                         @media (min-width:900px) {
                             position: absolute;
@@ -280,8 +296,16 @@ header {
                             background: white;
                             top: 20px;
                             text-align: center;
-                            a{
+                            padding-bottom: 30px; 
+                            a.menu-link-dropdown{
                                 color: $pcolor-pink;
+                                display: inline-block;
+                                border-radius: 0; 
+                                padding: 12px 20px;
+                                _border-right: 0.5px solid  rgba($pcolor-pink, .5);
+                                svg {
+                                    fill:  $pcolor-lightpurple;
+                                }
                             }
                         }
                     }                   
@@ -295,13 +319,8 @@ header {
                         @media (min-width:900px) { 
                             #dropdown{
                                 background:white;                                
-                                top: 65px;
-                                padding: 20px 0 50px;
+                                top: 45px;
                                 box-shadow: 0px 4px 5px rgba(#000, .1);
-                                border-top: 1px solid rgba($pcolor-lightpurple, .2);
-                                a.menu-link-dropdown{
-                                    display: inline-block;
-                                }
                             }
                             .icon-arrow{
                                 transition: all .2s ease-out;
@@ -313,7 +332,6 @@ header {
                 }    
             }
         }
-        
         //icon
         .label-login{
             height: 30px;
@@ -329,7 +347,7 @@ header {
                 border-radius: 6px;
                 position: absolute;
                 right: 0;
-                top: 12px;
+                top: 5px;
                 height: 4px;
                 width: 30px;
                 z-index: 99999;
@@ -366,6 +384,8 @@ header {
     @media (min-width:900px) {
         position: absolute;
         padding: 0;
+        width: 100%;
+        height: auto;
         &:hover{
             background: white;
             transition: all .2s ease;

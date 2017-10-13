@@ -8,7 +8,6 @@ $(document).ready(function(){
       nav.removeClass("fixed");
     }
   });
-
   // function for accordion
   $('.btn-plus').click(function(){
     var cardFaq = $(this).parent().parent();
@@ -20,7 +19,6 @@ $(document).ready(function(){
       $(this).text('+');
     }
   });
-
   // function for open modal faq
   $('.open-modal-faq').click(function(){
     $('.modal-overlay , .modal').addClass('active');  
@@ -28,36 +26,36 @@ $(document).ready(function(){
   $('.modal-overlay').click(function(){
     $('.modal-overlay , .modal').toggleClass('active');  
   });
-
-
-  $('.slider').slick({
+  $('.slider-content').slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerPadding: '0',
     centerMode: true,
-    prevArrow:"<button type='button' class='slick-prev'><img src='images/assets/arrow_slider-prev.png' /></button>",
-    nextArrow:"<button type='button' class='slick-next'><img src='images/assets/arrow_slider-next.png' /></button>",
+    adaptiveHeight: true,
+    prevArrow:"<button type='button' class='slick-prev'></button>",
+    nextArrow:"<button type='button' class='slick-next'></button>",
     responsive: [
       {
         breakpoint: 760,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 420,
         settings: {
-          centerMode: true,
-          centerPadding: '40px',
+          //centerMode: true,
+          //centerPadding: '60px',
+          //slidesToShow: 1,
+          //slidesToScroll: 1
           slidesToShow: 1,
           slidesToScroll: 1
         }
       }
     ]
-
-  });
+  }); 
 });
 
 
