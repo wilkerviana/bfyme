@@ -12,30 +12,24 @@ document.querySelector('.form-faq').addEventListener('submit',function(e){
 function validateForm() {
   // Nome válido
   if (formName.value == '') {
-    console.log('Digite um nome válido');
+    document.querySelector('.error_name').style.display = 'block';
   }
   // E-mail válido
   if (formEmail.value == '') {
-    console.log('Digite um email válido');
+    document.querySelector('.error_email').style.display = 'block';
   }else if(formEmail.value.substring(0,formEmail.value.indexOf('@')) < 1){
-    console.log('error de email usuario');
+    document.querySelector('.error_email').style.display = 'block';
   }else if(formEmail.value.substring(formEmail.value.indexOf('@')+1,formEmail.value.length < 3)){
-      console.log('error de email dominio');
+    document.querySelector('.error_email').style.display = 'block';
   }
   // Subject válido
   if(formSubject.value == ''){
-    console.log('Digite um Assunto para a mensagem');
+    document.querySelector('.error_subject').style.display = 'block';
   }
   // Message válida
   if(formMessage.value == ''){
-    console.log('Digite uma mensagem');
+    document.querySelector('.error_message').style.display = 'block';
   }
 }
 
-// const fields = document.querySelectorAll('.form-faq input');
-// fields.forEach(function(field) {
-//   field.addEventListener('focusout',function () {
-//     validateForm();    
-//   });
-// });
 

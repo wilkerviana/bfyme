@@ -12,6 +12,7 @@
 }
 .subtitle_banner{
   @include fontSite(txt-default,1.525em,wthin);
+  text-transform: uppercase;
 }
 .select-default{
   appearance: none;

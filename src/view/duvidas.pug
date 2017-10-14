@@ -76,19 +76,20 @@ html
         form.form-faq
           h2.title Formulário de mensagem
           fieldset.form-field
-            label(for="") Digite seu nome
-            span.error
+            label(for="name") Digite seu nome
+            span.error.error_name Nome inválido
             input.input_name(type="text" name="name")
           fieldset.form-field
-            label(for="") Digite seu e-mail
-            span.error
+            label(for="email") Digite seu e-mail
+            span.error.error_email E-mail inválido
             input.input_email(type="text" name="email")
           fieldset.form-field
-            label(for="") Digite o assunto da mensagem
-            span.error
+            label(for="subject") Digite o assunto da mensagem
+            span.error.error_subject Assunto inválido
             input.input_subject(type="text" name="subject")
           fieldset.form-field
-            label(for="") Escreva sua mensagem
+            label(for="message") Escreva sua mensagem
+            span.error.error_message Mensagem inválida
             textarea.message-faq(name="message", cols="30", rows="10")
           button.btn.btn-submit(type="submit") Enviar
     include includes/footer.pug
