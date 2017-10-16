@@ -206,6 +206,12 @@
 				transform: rotate(50deg);
 				top:12px;
 			}
+			&:hover{
+				&::before,
+				&::after{
+					background:$pcolor-lightpurple;
+				}
+			}
 		}
 		.slick-prev{
 			right: 20px;

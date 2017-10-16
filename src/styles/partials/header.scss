@@ -1,49 +1,3 @@
-@media (min-width:900px){
-    header.fixed{
-        position: fixed !important;
-        background: white;
-        transition: all .2s ease;
-        border-bottom: 1px solid rgba($pcolor-lightpurple, .2);
-        z-index: 15;
-        .container-header{
-            .brand{
-                svg{
-                    fill: $pcolor-lightpurple;
-                }
-            }
-            .btn-login{
-                @media (min-width:900px) {
-                    border: 2px solid $pcolor-lightpurple;
-                    color: $pcolor-lightpurple;
-                }
-                &:hover{
-                    background: $pcolor-lightpurple;
-                    color: white;
-                }
-            }
-            .menu{
-                ul.menu-navegation{
-                    .item{
-                        a{
-                            color:  $pcolor-lightpurple;
-                            .icon-arrow{
-                                &:after {
-                                    transform: rotate(-45deg);
-                                    background: $pcolor-lightpurple;
-                                }    
-                                &:before {
-                                    transform: rotate(45deg);
-                                    background: $pcolor-lightpurple;
-                                    right: 5px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 header {
     position: absolute;
     width: 100%;
@@ -51,19 +5,18 @@ header {
     z-index: 10;
     padding: 10px 0;
     display: block;
-    height: 90px;
-    background: transparent;
-    ////////////////////////////////// CONTAINER
+        ////////////////////////////////// CONTAINER
     .container-header{  
         height: 100%;
         width: 100%;
         padding:0;
         ////////////////////////////LOGO
         .brand{
-            @include centerv();
+            top: 15px;
             left: 0;
             width: 200px;
             height: 45px;
+            position: relative;
             cursor: pointer;
             z-index: 10;
             svg{
@@ -74,6 +27,7 @@ header {
             }
             @media (min-width:900px) {
                 left: 2vw;
+                @include centerv();
             }
         }
         ///////////////////////////////// BOTÃO ENTRAR
@@ -95,27 +49,20 @@ header {
             }
         }
         //////////////// MENU ACCOUNT (LOGADO)
-        input#menu-account {
-            display: none;
-            &:checked ~ .menu-account{
-                transition: all .3s ease;
-                opacity: 1;
-                visibility: visible;
-            }
-            &:checked ~ .label-menu-account{
-                .arrow-menu{
-                    transform: rotateZ(180deg);
-                    transition: all .1s ease-in;
-                    top: 10px;             
-                }
-            }
-        }
         .label-menu-account{
-            padding-right: 40px;
-            position: relative;
+            display: block;
+            width: 90%;
+            margin: 30px auto 0;
+            position: relative ;
+            border: 0; 
+            text-align: center;
+            @include fontSite(titles,1.35em,wregular);
+            padding-bottom: 5px;
+            border-top: 1px solid white;
+            border-radius: 0;
             .arrow-menu{
                 transition: all .1s ease-out;
-                width: 17px;
+                width: 16px;
                 height: 15px;
                 position: absolute;
                 right: 15px;
@@ -140,39 +87,94 @@ header {
                 }
             }
             &:hover {
+                background: transparent;
+                height: auto;
                 .arrow-menu{
                     &::before,
                     &::after{
-                        background: $pcolor-pink;
+                        background: white;
+                    }
+                    &::before {
+                        transform: rotate(-45deg);
+                        left: 0;
+                    }
+                    &::after {
+                        transform: rotate(45deg);
+                        right: 0;
                     }
                 }
             }
-        }
-        .menu-account{
-            position: absolute;
-            background: white;
-            top: 50px;
-            right: 55px;
-            z-index: 9999;
-            border-radius: 3px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .3s ease;
-            box-shadow: 0 1px 8px #ccc;
-            li {
+            .menu-account{
                 display: block;
-                border-bottom: 1px solid #ccc;
-                a {
-                    color:$scolor-darkblack;
-                    padding: 10px 20px;
+                position: relative;
+                margin-top: 20px;
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
+                background: transparent;
+                li {
                     display: block;
-                    text-decoration: none;
-                    @include fontSite(titles,0.95em,wregular);
+                    border-top: 0.2px solid white;
+                    text-align: center;
+                    a {
+                        color: white;
+                        padding: 10px 20px;
+                        display: block;
+                        text-decoration: none;
+                        @include fontSite(titles,0.85em,wregular);
                     }
-                    &:nth-child(3){
-                    border: 0;
+                } 
+            }
+            &:hover{
+                color: white;
+                .menu-account{
+                    transition: all .3s ease;
+                    opacity: 1;
+                    visibility: visible;
+                    height: auto;
                 }
-            } 
+            }
+            @media (min-width:900px){  
+                padding-right: 40px;
+                position: relative;
+                width: auto;
+                margin: 0;
+                display: inline-block;
+                border: 1.5px solid white;
+                @include centerv();  
+                right: 5vw;
+                @include fontSite(titles,1em,wsemibold);
+                padding-bottom: 10px;
+                border-radius: 10em;
+                /////SUB MENU - ACCOUNT
+                .menu-account{
+                    position: absolute;
+                    background: white;
+                    top: 47px;
+                    right:0;
+                    z-index: 9999;
+                    border-radius: 3px;
+                    transition: all .3s ease;
+                    box-shadow: 0 1px 8px #ccc;
+                    height: auto;
+                    li {
+                        display: block;
+                        border-bottom: 1px solid #ccc;
+                        text-align: center;
+                        border-top: 0px;
+                        a {
+                            color:$scolor-darkblack;
+                            padding: 10px 20px;
+                            display: block;
+                            text-decoration: none;
+                            @include fontSite(titles,0.85em,wregular);
+                            }
+                            &:nth-child(3){
+                            border: 0;
+                        }
+                    } 
+                }
+            }
         }
         /////////////////////////////////// MENU (PÚBLICO)
         input#label-login{
@@ -189,12 +191,15 @@ header {
                     &:after{transform: rotate(135deg);top: 0;}
                 }
             }
+            &:checked ~ .label-menu-account{
+                display: none;
+            }
         }
-        .menu{
+        nav.menu{
             z-index: 1;
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
             opacity: 0;
             visibility: hidden;
             transition: all .3s ease-out;
@@ -228,7 +233,7 @@ header {
                         display: inline-block;
                         padding: 0;
                         &:last-child{
-                            margin-right: 200px;
+                            margin-right: 280px;
                         }
                     }
                     a{
@@ -341,6 +346,7 @@ header {
             cursor: pointer;
             z-index: 15;
             outline: 0;
+            top: 50px;
             & > .icon-hamburguer{
                 background: white;
                 display: block;
@@ -386,6 +392,7 @@ header {
         padding: 0;
         width: 100%;
         height: auto;
+        background: transparent;
         &:hover{
             background: white;
             transition: all .2s ease;
@@ -405,6 +412,22 @@ header {
                         color: white;
                     }
                 }
+                .label-menu-account{
+                    .arrow-menu{
+                        &::before,
+                        &::after{
+                        background: $pcolor-lightpurple !important;
+                        }
+                    }
+                    &:hover{
+                        .arrow-menu{
+                            &::before,
+                            &::after{
+                            background: white !important;
+                            }
+                        }
+                    }
+                }
                 .menu{
                     ul.menu-navegation{
                         .item{
@@ -420,6 +443,80 @@ header {
                                         background: $pcolor-lightpurple;
                                         right: 5px;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:900px){
+    header.fixed{
+        position: fixed !important;
+        background: white;
+        transition: all .2s ease;
+        border-bottom: 1px solid rgba($pcolor-lightpurple, .2);
+        z-index: 15;
+        .container-header{
+            .brand{
+                svg{
+                    fill: $pcolor-lightpurple;
+                }
+            }
+            .btn-login{
+                @media (min-width:900px) {
+                    border: 2px solid $pcolor-lightpurple;
+                    color: $pcolor-lightpurple;
+                }
+                &:hover{
+                    background: $pcolor-lightpurple;
+                    color: white;
+                }
+            }
+            //////////////// MENU ACCOUNT (LOGADO)
+            .label-menu-account{
+                .arrow-menu{
+                    &::before,
+                    &::after{
+                    background: $pcolor-pink !important;
+                    }
+                }
+                &:hover {
+                    .arrow-menu{
+                        &::before,
+                        &::after{
+                            background:white !important;
+                        }
+                    }
+                    .menu-account{
+                        transition: all .3s ease;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                @media (min-width:900px) {
+                    display: inline-block;
+                    @include centerv();  
+                    right: 5vw;
+                    @include fontSite(titles,1.1em,wsemibold);
+                }
+            }
+            .menu{
+                ul.menu-navegation{
+                    .item{
+                        a{
+                            color:  $pcolor-lightpurple;
+                            .icon-arrow{
+                                &:after {
+                                    transform: rotate(-45deg);
+                                    background: $pcolor-lightpurple;
+                                }    
+                                &:before {
+                                    transform: rotate(45deg);
+                                    background: $pcolor-lightpurple;
+                                    right: 5px;
                                 }
                             }
                         }

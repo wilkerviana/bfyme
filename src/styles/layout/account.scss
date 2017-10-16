@@ -1,3 +1,12 @@
+.bg-account{
+    @media (max-width:900px) {
+        header{
+            background: linear-gradient(to left,rgba(152, 6, 110,.9),rgba(152, 6, 110,.9)  ,rgba(152, 6, 110,1) 75%),url(../images/backgrounds/footer-pattern.png);
+            position: relative !important;
+            padding-bottom: 0;
+        }
+    }
+}
 .tabs {
     width: 100%;  
     list-style: none;
@@ -146,7 +155,7 @@ ul.tab{
             
         }
         &:nth-child(2) {
-            width: auto;
+            width: 100% !important;
         }
         /* :checked */
         .tab-input:checked ~ .tab-content {
@@ -280,15 +289,20 @@ ul.tab{
 }
 .wrapper-account{
     width: 100vw;
-    height: 760px;
+    height: 900px;
     background: rgba($scolor-lightgray,.1);
   }
 .wrapper-header-account {
-    margin: 100px 0 0;
-    padding: 20px 0;
+    
     display: block;
-    margin-bottom: 20px;
-
+    padding: 10px 0;
+    
+    @media (min-width:900px){
+        height: 100px;
+        margin-bottom: 20px;
+        padding: 20px 0;
+        background: linear-gradient(to left,rgba(152, 6, 110,.9),rgba(152, 6, 110,.9)  ,rgba(152, 6, 110,1) 75%),url(../images/backgrounds/footer-pattern.png);
+    }
 }
 .container-account{
     margin: 0 auto;
